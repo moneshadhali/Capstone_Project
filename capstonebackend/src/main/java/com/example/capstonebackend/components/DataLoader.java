@@ -58,6 +58,9 @@ public class DataLoader implements ApplicationRunner {
         Order order3 = new Order("SE1  3JS", "109 Clapham Common", false, false, "Jeffrey", 50 );
         orderRepository.save(order3);
 
+        Order order4 = new Order(user1, "H87 3PB", "99 Queen Road", true, true, "Jenny", 60 );
+        orderRepository.save(order4);
+
         //Packages
         Package package1 = new Package(order1, "Headphones", 1, 300);
         packageRepository.save(package1);
@@ -73,6 +76,12 @@ public class DataLoader implements ApplicationRunner {
 
         Package package5 = new Package(order1, "TV", 5, 1200);
         packageRepository.save(package5);
+
+        Package package6 = new Package(order4, "Barbie", 1, 100);
+        packageRepository.save(package6);
+
+        Package package7 = new Package(order4, "Ken", 5, 1200);
+        packageRepository.save(package7);
 
     }
 }
