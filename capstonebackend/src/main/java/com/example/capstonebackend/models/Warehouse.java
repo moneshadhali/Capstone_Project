@@ -1,13 +1,22 @@
 package com.example.capstonebackend.models;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 public class Warehouse {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
     private String name;
+    @Column
     private String location;
+    @Column
     private int area;
 
-    public Warehouse(long id, String name, String location, int area) {
-        this.id = id;
+    public Warehouse(String name, String location, int area) {
         this.name = name;
         this.location = location;
         this.area = area;
