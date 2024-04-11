@@ -15,7 +15,7 @@ public class User {
 
     @ManyToOne
     @JsonIgnoreProperties({"users"})
-    @JoinColumn(name = "warehouse_id")
+    @JoinColumn(name = "warehouseId")
     private Warehouse warehouse;
 
     @OneToMany(mappedBy = "user")
