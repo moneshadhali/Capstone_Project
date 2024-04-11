@@ -22,13 +22,13 @@ public class Order {
     @Column
     private Boolean isDelivered;
     @Column
-    private String  customerName;
+    private String customerName;
     @Column
     private float volume;
 
     @OneToMany(mappedBy = "order")
     @JsonIgnoreProperties({"order"})
-    private List <Package> packages;
+    private List<Package> packages;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -98,7 +98,7 @@ public class Order {
         this.address = address;
     }
 
-    public Boolean getAccepted() {
+    public Boolean isAccepted() {
         return isAccepted;
     }
 
@@ -106,7 +106,7 @@ public class Order {
         isAccepted = accepted;
     }
 
-    public Boolean getDelivered() {
+    public Boolean isDelivered() {
         return isDelivered;
     }
 
@@ -130,11 +130,11 @@ public class Order {
         this.volume = volume;
     }
 
-    public void addPackage(Package newPackage){
+    public void addPackage(Package newPackage) {
         this.packages.add(newPackage);
     }
 
-    public void removePackage(Package newPackage){
+    public void removePackage(Package newPackage) {
         this.packages.remove(newPackage);
     }
 }

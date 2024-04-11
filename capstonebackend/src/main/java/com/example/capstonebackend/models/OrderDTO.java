@@ -19,7 +19,7 @@ public class OrderDTO {
         this.isDelivered = isDelivered;
         this.id = id;
     }
-    
+
     public OrderDTO(){}
 
     public boolean isAccepted() {
