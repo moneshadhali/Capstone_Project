@@ -1,5 +1,6 @@
 package com.example.capstonebackend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
 @Entity(name="packages")
@@ -17,6 +18,7 @@ public class Package {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
+//    @JsonIgnoreProperties({"order"})
     private Order order;
 
     public Package(Order order, String productName, int weight, float volume) {
