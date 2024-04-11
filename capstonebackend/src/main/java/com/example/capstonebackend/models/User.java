@@ -12,6 +12,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @Column
+    private String name;
+
+    @Column
+    private String region;
+
+    @Column
+    private float maxVolume;
 
     @ManyToOne
     @JsonIgnoreProperties({"users"})
@@ -21,15 +29,6 @@ public class User {
     @OneToMany(mappedBy = "user")
     @JsonIgnoreProperties({"user"})
     private List<Order> orders;
-
-    @Column
-    private String name;
-
-    @Column
-    private String region;
-
-    @Column
-    private float maxVolume;
 
     public User( Warehouse warehouse, String name, String region, float maxVolume) {
         this.warehouse = warehouse;

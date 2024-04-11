@@ -1,8 +1,11 @@
 package com.example.capstonebackend.services;
 
 import com.example.capstonebackend.models.User;
+import com.example.capstonebackend.models.UserDTO;
 import com.example.capstonebackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,5 +23,12 @@ public class UserService {
 
     public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
+    }
+
+    public User editUser(Long id, UserDTO userDTO) {
+        User userToUpdate = userRepository.findById(id).get();
+        String userName = userDTO.getName();
+        userToUpdate.setName(userName);
+        return userRepository.save(userToUpdate);
     }
 }
