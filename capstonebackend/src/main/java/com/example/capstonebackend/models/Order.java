@@ -2,6 +2,8 @@ package com.example.capstonebackend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -32,14 +34,14 @@ public class Order {
     @JoinColumn(name = "userId", nullable = false)
     private User user;
 
-    public Order(Long id, String postcode, String address, Boolean isAccepted, Boolean isDelivered, String customerName, float volume) {
-        this.id = id;
+    public Order(String postcode, String address, Boolean isAccepted, Boolean isDelivered, String customerName, float volume) {
         this.postcode = postcode;
         this.address = address;
         this.isAccepted = isAccepted;
         this.isDelivered = isDelivered;
         this.customerName = customerName;
         this.volume = volume;
+        this.packages = new ArrayList<>();
     }
 
     public Order() {
@@ -99,5 +101,13 @@ public class Order {
 
     public void setVolume(float volume) {
         this.volume = volume;
+    }
+
+    public void addPackage(Package newPackage){
+        this.packages.add(newPackage);
+    }
+
+    public void removePackage(Package newPackage){
+        this.packages.remove(newPackage);
     }
 }

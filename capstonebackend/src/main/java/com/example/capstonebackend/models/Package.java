@@ -20,8 +20,7 @@ public class Package {
     @JoinColumn(name = "orderId", nullable = false)
     private Order order;
 
-    public Package(Long id, String productName, int weight, float volume) {
-        this.id = id;
+    public Package(String productName, int weight, float volume) {
         this.productName = productName;
         this.weight = weight;
         this.volume = volume;

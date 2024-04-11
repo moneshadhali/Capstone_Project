@@ -31,8 +31,7 @@ public class User {
     @Column
     private float maxVolume;
 
-    public User(long id, int warehouseId, Warehouse warehouse, String name, String region, float maxVolume) {
-        this.warehouse = warehouse;
+    public User( String name, String region, float maxVolume) {
         this.orders = new ArrayList<>();
         this.name = name;
         this.region = region;
@@ -89,6 +88,14 @@ public class User {
 
     public void setMaxVolume(float maxVolume) {
         this.maxVolume = maxVolume;
+    }
+
+    public void addOrder(Order order){
+        this.orders.add(order);
+    }
+
+    public void removeOrder(Order order){
+        this.orders.add(order);
     }
 }
 
