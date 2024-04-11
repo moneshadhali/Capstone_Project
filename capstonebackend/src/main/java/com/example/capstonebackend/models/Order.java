@@ -1,10 +1,11 @@
 package com.example.capstonebackend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="order")
+@Table(name="orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,8 +24,9 @@ public class Order {
     @Column
     private float volume;
 
-    @OneToMany(mappedBy = "order")
-    private List <Package> packageList;
+    @OneToMany(mappedBy = "orders")
+    @JsonIgnoreProperties({"orders"})
+    private List <Package> packages;
 
     @ManyToOne
     @JoinColumn(name = "userId", nullable = false)

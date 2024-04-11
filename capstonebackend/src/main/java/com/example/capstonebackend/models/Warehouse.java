@@ -1,5 +1,6 @@
 package com.example.capstonebackend.models;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Warehouse {
         this.name = name;
         this.location = location;
         this.area = area;
+        this.users = new ArrayList<>();
     }
 
     public Warehouse() {
@@ -55,6 +57,14 @@ public class Warehouse {
 
     public void setArea(int area) {
         this.area = area;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 }
 

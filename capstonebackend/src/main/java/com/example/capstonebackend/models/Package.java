@@ -3,7 +3,7 @@ package com.example.capstonebackend.models;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="package")
+@Table(name="packages")
 public class Package {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
