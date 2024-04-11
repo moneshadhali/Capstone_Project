@@ -26,12 +26,12 @@ public class Order {
     @Column
     private float volume;
 
-    @OneToMany(mappedBy = "orders")
-    @JsonIgnoreProperties({"orders"})
+    @OneToMany(mappedBy = "order")
+    @JsonIgnoreProperties({"order"})
     private List <Package> packages;
 
     @ManyToOne
-    @JoinColumn(name = "userId", nullable = false)
+    @JoinColumn(name = "userId")
     private User user;
 
     public Order(String postcode, String address, Boolean isAccepted, Boolean isDelivered, String customerName, float volume) {

@@ -2,8 +2,7 @@ package com.example.capstonebackend.models;
 
 import jakarta.persistence.*;
 
-@Entity
-@Table(name="packages")
+@Entity(name="packages")
 public class Package {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +16,7 @@ public class Package {
     private float volume;
 
     @ManyToOne
-    @JoinColumn(name = "orderId", nullable = false)
+    @JoinColumn(name = "orderId")
     private Order order;
 
     public Package(String productName, int weight, float volume) {

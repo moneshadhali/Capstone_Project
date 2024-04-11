@@ -26,7 +26,12 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     WarehouseRepository warehouseRepository;
+
+    public DataLoader() {
+    }
+
     @Override
+
     public void run(ApplicationArguments args) throws Exception {
 
         Warehouse warehouse1 = new Warehouse("London", "E8", 3000);
@@ -83,6 +88,4 @@ public class DataLoader implements ApplicationRunner {
     }
 
 
-    public DataLoader() {
-    }
 }
