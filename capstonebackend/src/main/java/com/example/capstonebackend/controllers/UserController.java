@@ -44,6 +44,17 @@ public class UserController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @GetMapping(value = "/{id}/notDeliveredOrders")
+    public ResponseEntity<List<Order>> getUserNotDeliveredOrders(@PathVariable Long id) {
+        Optional<User> user = userService.getUserById(id);
+
+        if(user.isPresent()){
+            List<Order> userOrders = userService.getUserNotDeliveredOrders(id);
+            return new ResponseEntity<>(userOrders, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
     @PatchMapping(value = "/{id}")
     public ResponseEntity<User> editUser(@PathVariable Long id, @RequestBody UserDTO userDTO){
         Optional<User> user = userService.getUserById(id);
