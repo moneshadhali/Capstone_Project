@@ -1,8 +1,8 @@
 package com.example.capstonebackend.controllers;
 
 import com.example.capstonebackend.models.Order;
+import com.example.capstonebackend.models.OrderDTO;
 import com.example.capstonebackend.services.OrderService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,27 +27,22 @@ public class OrderController {
     public ResponseEntity<Order> getOrderById(@PathVariable Long id){
         Optional<Order> foundOrder = orderService.getOrderById(id);
         if (foundOrder.isPresent()){
-            return new ResponseEntity<>(null, HttpStatus.OK);
+            return new ResponseEntity<>(foundOrder.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-//    @PostMapping("/{id}")
-//    public ResponseEntity<Order> updateOrder(@RequestBody Order order, @PathVariable Long id){
-//        Order newOrder = orderService.updateOrder(order, id);
-//        return new ResponseEntity<>(order, HttpStatus.CREATED);
-//    }
-//
-//    @PutMapping (value = "/{id}")
-//    public ResponseEntity<Order> updateChocolate(@RequestBody Order order, @PathVariable Long id){
-//        Order order = orderService.updateOrder(order, id);
-//        return new ResponseEntity<>(order, HttpStatus.OK);
-//    }
-
-    @DeleteMapping(value = "/{id}")
-    public ResponseEntity<Long> deleteOrder(@PathVariable Long id){
-        orderService.deleteOrder(id);
-        return new ResponseEntity<>(id, HttpStatus.OK);
+    @PatchMapping("/{id}")
+    public ResponseEntity<Order> updateOrder(@PathVariable Long id, @RequestBody OrderDTO orderDTO) {
+        Optional<Order> optionalOrder = orderService.getOrderById(id);
+        if (optionalOrder.isPresent()) {
+            Order order = optionalOrder.get();
+            order.setAccepted(orderDTO.isAccepted());
+            order.setDelivered(orderDTO.isDelivered());
+            Order updatedOrder = orderService.updateOrder(id, order);
+            return new ResponseEntity<>(updatedOrder, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
-
 }
