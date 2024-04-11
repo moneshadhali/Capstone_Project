@@ -1,5 +1,6 @@
 package com.example.capstonebackend.services;
 
+import com.example.capstonebackend.models.Order;
 import com.example.capstonebackend.models.User;
 import com.example.capstonebackend.models.UserDTO;
 import com.example.capstonebackend.repositories.UserRepository;
@@ -30,5 +31,10 @@ public class UserService {
         String userName = userDTO.getName();
         userToUpdate.setName(userName);
         return userRepository.save(userToUpdate);
+    }
+
+    public List<Order> getUserOrders(long id) {
+        User user = userRepository.findById(id).get();
+        return user.getOrders();
     }
 }

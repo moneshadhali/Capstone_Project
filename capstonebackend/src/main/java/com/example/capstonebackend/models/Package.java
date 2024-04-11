@@ -18,7 +18,7 @@ public class Package {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
-//    @JsonIgnoreProperties({"order"})
+    @JsonIgnoreProperties({"order"})
     private Order order;
 
     public Package(Order order, String productName, int weight, float volume) {
