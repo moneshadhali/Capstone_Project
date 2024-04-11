@@ -1,33 +1,23 @@
 package com.example.capstonebackend.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
-@Entity(name = "warehouses")
 public class Warehouse {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     @Column
     private String name;
-
     @Column
     private String location;
-
     @Column
     private int area;
 
-    @OneToMany(mappedBy = "warehouse")
-    @JsonIgnoreProperties({"warehouse"})
-    private List<User> users;
-
-    public Warehouse(long id, String name, String location, int area) {
-        this.id = id;
+    public Warehouse(String name, String location, int area) {
         this.name = name;
         this.location = location;
         this.area = area;
