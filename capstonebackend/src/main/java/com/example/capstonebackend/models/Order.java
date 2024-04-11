@@ -31,8 +31,19 @@ public class Order {
     private List <Package> packages;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "user_id")
     private User user;
+
+    public Order(User user, String postcode, String address, Boolean isAccepted, Boolean isDelivered, String customerName, float volume) {
+        this.user = user;
+        this.postcode = postcode;
+        this.address = address;
+        this.isAccepted = isAccepted;
+        this.isDelivered = isDelivered;
+        this.customerName = customerName;
+        this.volume = volume;
+        this.packages = new ArrayList<>();
+    }
 
     public Order(String postcode, String address, Boolean isAccepted, Boolean isDelivered, String customerName, float volume) {
         this.postcode = postcode;
@@ -45,6 +56,22 @@ public class Order {
     }
 
     public Order() {
+    }
+
+    public List<Package> getPackages() {
+        return packages;
+    }
+
+    public void setPackages(List<Package> packages) {
+        this.packages = packages;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getId() {

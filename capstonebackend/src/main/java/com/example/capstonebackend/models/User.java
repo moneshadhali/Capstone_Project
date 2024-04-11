@@ -15,7 +15,7 @@ public class User {
 
     @ManyToOne
     @JsonIgnoreProperties({"users"})
-    @JoinColumn(name = "warehouseId")
+    @JoinColumn(name = "warehouse_id")
     private Warehouse warehouse;
 
     @OneToMany(mappedBy = "user")
@@ -31,7 +31,8 @@ public class User {
     @Column
     private float maxVolume;
 
-    public User( String name, String region, float maxVolume) {
+    public User( Warehouse warehouse, String name, String region, float maxVolume) {
+        this.warehouse = warehouse;
         this.orders = new ArrayList<>();
         this.name = name;
         this.region = region;
@@ -41,6 +42,7 @@ public class User {
     public User() {
 
     }
+
 
     public long getId() {
         return id;

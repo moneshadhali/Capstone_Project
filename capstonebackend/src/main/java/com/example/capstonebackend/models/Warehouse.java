@@ -30,6 +30,8 @@ public class Warehouse {
         this.users = new ArrayList<>();
     }
 
+
+
     public Warehouse() {
     }
 

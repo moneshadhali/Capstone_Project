@@ -9,18 +9,19 @@ public class Package {
     @Column
     private Long id;
     @Column
-    private String productName;
+    private String product_name;
     @Column
     private int weight;
     @Column
     private float volume;
 
     @ManyToOne
-    @JoinColumn(name = "orderId")
+    @JoinColumn(name = "order_id")
     private Order order;
 
-    public Package(String productName, int weight, float volume) {
-        this.productName = productName;
+    public Package(Order order, String productName, int weight, float volume) {
+        this.order = order;
+        this.product_name = productName;
         this.weight = weight;
         this.volume = volume;
     }
@@ -36,12 +37,20 @@ public class Package {
         this.id = id;
     }
 
-    public String getProductName() {
-        return productName;
+    public String getProduct_name() {
+        return product_name;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public int getWeight() {
