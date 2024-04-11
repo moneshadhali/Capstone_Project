@@ -1,16 +1,37 @@
 package com.example.capstonebackend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity(name = "warehouses")
 public class Warehouse {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column
     private String name;
+
+    @Column
     private String location;
+
+    @Column
     private int area;
+
+    @OneToMany(mappedBy = "warehouse")
+    @JsonIgnoreProperties({"warehouse"})
+    private List<User> users;
 
     public Warehouse(long id, String name, String location, int area) {
         this.id = id;
         this.name = name;
         this.location = location;
         this.area = area;
+        this.users = new ArrayList<>();
     }
 
     public Warehouse() {
@@ -46,6 +67,14 @@ public class Warehouse {
 
     public void setArea(int area) {
         this.area = area;
+    }
+
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
 }
 
