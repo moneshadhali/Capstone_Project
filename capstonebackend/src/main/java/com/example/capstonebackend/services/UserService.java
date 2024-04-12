@@ -43,7 +43,7 @@ public class UserService {
         List<Order> tempOrders = getUserOrders(id);
         List<Order> result = new ArrayList<>();
         for (Order order : tempOrders){
-            if(!order.getDelivered()){
+            if(!order.isDelivered()){
                 result.add(order);
             }
         }
