@@ -8,6 +8,9 @@
 7. [Class Diagram and ERD](#class-erd-diagram)
 8. [Data Dictionary](#data-dictionary)
 9. [API Route Table](#api-routes-table)
+10. [Credits and Acknowledgements](#credits-and-acknowledgements)
+11. [Licences](#licences)
+
     
 <a id="introduction"></a>
 ## Introduction
@@ -120,3 +123,14 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 | 10   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID |
 
 
+## Credits and Acknowledgements
+
+The Capstone Collaborators:
+- Harun Walizadeh - GitHub: https://github.com/harunwa
+- Vivian - Github: https://github.com/viviann-1
+- Monesha Dhali - Github: https://github.com/moneshadhali
+- Ralphael Obadiaru - Github: https://github.com/osamui01
+
+## Licences
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
