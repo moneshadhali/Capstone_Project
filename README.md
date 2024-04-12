@@ -55,3 +55,37 @@ Back-end
 4. Create database 'capstone_db' in your terminal/Gitbash (local computer)
 5. Run the application and server
 5. Use POSTMAN to use or test the endpoints (use the provided postman collection found in GitHub repo)
+
+
+<a id="mvp"></a>
+## MVP
+
+### Backend:
+1. Create a Spring application and define models with table relationships.
+2. Implement CRUD routes in controllers and corresponding service layer.
+3. Integrate transactional methods in the service layer for order fulfillment process.
+4. Populate the database using a data loader and store data in PostgreSQL named "deliverydb".
+
+### Frontend:
+1. User can log in.
+2. User can view their profile.
+3. User can edit their profile information.
+4. User can view Delivery Jobs in a list.
+5. User can accept a job from the Delivery Jobs List.
+6. User can view their own delivery jobs.
+7. User can mark their own delivery jobs as complete.
+
+
+<a id="extension"></a>
+## Extension
+
+### Frontend:
+1. User can view a map of the order address.
+2. User can customize the background color of the app.
+3. Customers can view their order status.
+4. User can check the history of orders.
+
+### Backend:
+1. Track order cost and duration.
+2. Implement a user page with a separate navigation route to track order status.
+
