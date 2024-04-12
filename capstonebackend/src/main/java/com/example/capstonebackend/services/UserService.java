@@ -3,10 +3,9 @@ package com.example.capstonebackend.services;
 import com.example.capstonebackend.models.Order;
 import com.example.capstonebackend.models.User;
 import com.example.capstonebackend.models.UserDTO;
+import com.example.capstonebackend.repositories.OrderRepository;
 import com.example.capstonebackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,6 +17,9 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    OrderRepository orderRepository;
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
@@ -59,5 +61,17 @@ public class UserService {
             }
         }
         return result;
+    }
+
+
+    public User assignOrderToUser(Long userId, Long orderId) {
+        User assignedUser = userRepository.findById(userId).get();
+        Order unassignedOrder = orderRepository.findById(orderId).get();
+        unassignedOrder.setAccepted(true);
+        unassignedOrder.setUser(assignedUser);
+
+        orderRepository.save(unassignedOrder);
+        userRepository.save(assignedUser);
+        return assignedUser;
     }
 }
