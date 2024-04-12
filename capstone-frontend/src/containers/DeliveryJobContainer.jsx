@@ -1,7 +1,19 @@
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
+import { useState, useEffect } from "react";
+import UserProfile from "../components/UserProfile";
 
 const DeliveryJobContainer = () => {
+
+    const [userProfile, setUserProfile] = useState([]);
+
+    const fetchUserProfile = async () =>{
+        const response = await fetch ("http://localhost:8080/users/1");
+        const data = await response.json();
+        setUserProfile(data);  
+
+    }
+
     const deliveryRoute = createBrowserRouter([
         {
             path: "/", 
@@ -9,7 +21,7 @@ const DeliveryJobContainer = () => {
             children: [
                 {
                     path: "/profile",
-                    element: ( <> <h1>Profile</h1></>)
+                    element: ( <> <UserProfile userProfile={userProfile} /></>)
                 },
                 {
                     path: "/profile/:id/edit",
@@ -34,7 +46,12 @@ const DeliveryJobContainer = () => {
             ]
         }
         
-    ])
+    ]);
+
+    useEffect( () =>{
+        fetchUserProfile();
+        console.log(userProfile)
+    }, [])
 
     return ( 
         <>
