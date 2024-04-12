@@ -93,15 +93,15 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 <a id="extension"></a>
 ## Extension
 
+### Backend:
+1. Track order cost and duration.
+2. Implement a user page with a separate navigation route to track order status.
+
 ### Frontend:
 1. User can view a map of the order address.
 2. User can customize the background color of the app.
 3. Customers can view their order status.
 4. User can check the history of orders.
-
-### Backend:
-1. Track order cost and duration.
-2. Implement a user page with a separate navigation route to track order status.
 
 
 <a id="data-dictionary"></a>
