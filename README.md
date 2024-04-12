@@ -104,6 +104,51 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 2. Implement a user page with a separate navigation route to track order status.
 
 
+<a id="data-dictionary"></a>
+## Data Dictionary
+
+Warehouse Table
+
+| Column       | Data Type   | Description           |
+|--------------|-------------|-----------------------|
+| wareHouseId  | Serial      | Primary Key           |
+| name         | VARCHAR(255)| Name of the warehouse |
+| location     | VARCHAR(255)| Location of the warehouse |
+| area         | Double      | Area of the warehouse |
+
+User Table
+
+| Column       | Data Type   | Description           |
+|--------------|-------------|-----------------------|
+| user_id      | Serial      | Primary Key           |
+| warehouse_id | INT         | Foreign Key to Warehouse Table |
+| name         | VARCHAR(255)| Name of the user      |
+| region       | VARCHAR(255)| Region of the user    |
+| maxVolume    | Double      | Maximum volume allowed for the user |
+
+Order Table
+
+| Column        | Data Type   | Description           |
+|---------------|-------------|-----------------------|
+| order_id      | Serial      | Primary Key           |
+| user_id       | INT         | Foreign Key to User Table |
+| postcode      | VARCHAR(255)| Postcode of the order |
+| address       | VARCHAR(255)| Address of the order  |
+| isAccepted    | BOOLEAN     | Order acceptance status |
+| isDelivered   | BOOLEAN     | Order delivery status |
+| customerName  | VARCHAR(255)| Name of the customer  |
+| volume        | Double      | Volume of the order   |
+
+Package Table
+
+| Column       | Data Type   | Description           |
+|--------------|-------------|-----------------------|
+| package_id   | Serial      | Primary Key           |
+| order_id     | INT         | Foreign Key to Order Table |
+| productName  | VARCHAR(255)| Name of the product   |
+| volume       | Double      | Volume of the package |
+| weight       | INT         | Weight of the package |
+
 
 <a id="api-routes-table"></a>
 ## API Route Table
