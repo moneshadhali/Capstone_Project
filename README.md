@@ -117,10 +117,9 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 | 4   | GET /delivery/orders                    | Retrieve all orders                |
 | 5   | PATCH /delivery.order/:id               | Edit order by ID (prior to acceptance) |
 | 6   | GET /delivery/orders/:userId            | Retrieve orders by user ID         |
-| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID |
-| 8   | POSTMAN Routes                          | Routes defined in Postman          |          
-| 9   | GET /orders/:orderId                   | Retrieve customer's order by order ID |
-| 10   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID |
+| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID |        
+| 8   | GET /orders/:orderId                   | Retrieve customer's order by order ID |
+| 9   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID |
 
 
 ## Credits and Acknowledgements
