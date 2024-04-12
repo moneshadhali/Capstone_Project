@@ -76,5 +76,13 @@ public class UserController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-
+    @PatchMapping(value = "/{userId}/orders/{orderId}")
+    public ResponseEntity<User> assignOrder(@PathVariable Long userId, @PathVariable Long orderId) {
+        Optional<User> user = userService.getUserById(userId);
+        if (user.isPresent()) {
+            User assignedUser = userService.assignOrderToUser(userId, orderId);
+            return new ResponseEntity<>(assignedUser, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_MODIFIED);
+    }
 }

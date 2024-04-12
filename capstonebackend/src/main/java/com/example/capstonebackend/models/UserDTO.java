@@ -6,6 +6,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDTO {
@@ -15,8 +16,8 @@ public class UserDTO {
 
     private String name;
 
-    public UserDTO(List<OrderDTO> orders, String name) {
-        this.orders = orders;
+    public UserDTO(String name) {
+        this.orders = new ArrayList<>();
         this.name = name;
     }
 
@@ -29,5 +30,13 @@ public class UserDTO {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<OrderDTO> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<OrderDTO> orders) {
+        this.orders = orders;
     }
 }
