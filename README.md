@@ -47,14 +47,25 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 
 
 <a id="installation"></a>
-## Installation Instruction
-Back-end
-1. Have a Java IDE, POSTMAN, Postico, PostgreSQL Installed
-2. Fork Project to your GitHub/Clone Project to your local computer
-3. Open the project in an IDE
-4. Create database 'capstone_db' in your terminal/Gitbash (local computer)
-5. Run the application and server
-5. Use POSTMAN to use or test the endpoints (use the provided postman collection found in GitHub repo)
+## Installation Instructions
+
+### Client-side
+
+1. Install Node.js.
+2. In terminal or Gitbash, navigate to the directory you want to copy the repository into.
+3. Run the command `git clone git@github.com:moneshadhali/Capstone_Project.git`.
+4. Run the command `git pull` to ensure you have the latest version.
+5. Open the React project in your preferred IDE such as Visual Studio Code.
+6. Open the integrated terminal and run the command `npm install` followed by `npm start`.
+
+### Server-side
+
+1. Install Postman, Postico, PostgreSQL, and your preferred IDE.
+2. In terminal or Gitbash, navigate to the directory you want to copy the repository into.
+3. Run the command `git clone git@github.com:moneshadhali/Capstone_Project.git`.
+4. In the terminal or Gitbash, create the database called `delivery_db` by running the command `createdb delivery_db`.
+5. In the terminal, run the command `./mvnw spring-boot:run`.
+
 
 
 <a id="mvp"></a>
