@@ -49,4 +49,15 @@ public class UserService {
         }
         return result;
     }
+
+    public List<Order> getUserDeliveredOrders(Long id) {
+        List<Order> tempOrders = getUserOrders(id);
+        List<Order> result = new ArrayList<>();
+        for (Order order : tempOrders){
+            if(order.isDelivered()){
+                result.add(order);
+            }
+        }
+        return result;
+    }
 }
