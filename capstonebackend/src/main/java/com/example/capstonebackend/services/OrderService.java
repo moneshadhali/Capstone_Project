@@ -1,7 +1,9 @@
 package com.example.capstonebackend.services;
 
 import com.example.capstonebackend.models.Order;
+import com.example.capstonebackend.models.OrderDTO;
 import com.example.capstonebackend.repositories.OrderRepository;
+import com.example.capstonebackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,9 @@ public class OrderService {
 
     @Autowired
     OrderRepository orderRepository;
+
+    @Autowired
+    UserRepository userRepository;
 
     public List<Order> getAllOrders(){
         return orderRepository.findAll();
@@ -26,12 +31,29 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
-    public Order updateOrder(Long id, Order order){
-        if (orderRepository.existsById(id)){
-            order.setId(id);
-            return orderRepository.save(order);
-        }
-        return null;
+//    public Order updateOrder(Long id, Order order){
+//        if (orderRepository.existsById(id)){
+//            order.setId(id);
+//            return orderRepository.save(order);
+//        }
+//        return null;
+//    }
+
+
+    public Order updateStatus(Long id, OrderDTO orderDTO){
+        Order orderToUpdate = orderRepository.findById(id).get();
+
+        boolean orderAcceptedStatus = orderDTO.isAccepted();
+        boolean orderDeliveryStatus = orderDTO.isDelivered();
+
+        orderToUpdate.setAccepted(orderAcceptedStatus);
+        orderToUpdate.setDelivered(orderDeliveryStatus);
+
+//        if (orderAcceptedStatus){
+//            orderToUpdate.setDelivered(orderDeliveryStatus);
+//        }
+        orderRepository.save(orderToUpdate);
+        return orderToUpdate;
     }
 
     public void deleteOrder(Long id){

@@ -33,16 +33,12 @@ public class OrderController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Order> updateOrder(@PathVariable Long id, @RequestBody OrderDTO orderDTO) {
-        Optional<Order> optionalOrder = orderService.getOrderById(id);
-        if (optionalOrder.isPresent()) {
-            Order order = optionalOrder.get();
-            order.setAccepted(orderDTO.isAccepted());
-            order.setDelivered(orderDTO.isDelivered());
-            Order updatedOrder = orderService.updateOrder(id, order);
-            return new ResponseEntity<>(updatedOrder, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    public ResponseEntity<Order> updateOrderStatus(@PathVariable Long id, OrderDTO orderDTO){
+        Optional <Order> order = orderService.getOrderById(id);
+        if(order.isPresent()){
+            Order orderToUpdate = orderService.updateStatus(id, orderDTO);
+            return new ResponseEntity<>(orderToUpdate, HttpStatus.OK);
         }
+        return new ResponseEntity<>(null, HttpStatus.NOT_MODIFIED);
     }
 }

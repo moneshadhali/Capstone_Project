@@ -22,6 +22,14 @@ public class OrderDTO {
 
     public OrderDTO(){}
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public boolean isAccepted() {
         return isAccepted;
     }
@@ -36,13 +44,5 @@ public class OrderDTO {
 
     public void setDelivered(boolean delivered) {
         isDelivered = delivered;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 }
