@@ -89,3 +89,23 @@ Back-end
 1. Track order cost and duration.
 2. Implement a user page with a separate navigation route to track order status.
 
+
+
+<a id="api-routes-table"></a>
+## API Route Table
+
+
+| No. | Route                                   | Description                        |
+|-----|-----------------------------------------|------------------------------------|
+| 1   | GET /delivery/user                      | Retrieve all users                 |
+| 2   | GET /delivery/user/:id                  | Retrieve user profile by ID        |
+| 3   | PUT /delivery/user/:id/edit             | Edit user profile by ID            |
+| 4   | GET /delivery/orders                    | Retrieve all orders                |
+| 5   | PATCH /delivery.order/:id               | Edit order by ID (prior to acceptance) |
+| 6   | GET /delivery/orders/:userId            | Retrieve orders by user ID         |
+| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID |
+| 8   | POSTMAN Routes                          | Routes defined in Postman          |          
+| 9   | GET /orders/:orderId                   | Retrieve customer's order by order ID |
+| 10   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID |
+
+
