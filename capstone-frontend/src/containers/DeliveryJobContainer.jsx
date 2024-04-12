@@ -5,7 +5,7 @@ import UserProfile from "../components/UserProfile";
 
 const DeliveryJobContainer = () => {
 
-    const [userProfile, setUserProfile] = useState([]);
+    const [userProfile, setUserProfile] = useState(null);
 
     const fetchUserProfile = async () =>{
         const response = await fetch ("http://localhost:8080/users/1");
