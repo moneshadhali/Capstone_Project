@@ -2,12 +2,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import { useEffect, useState } from "react";
 import DeliveryJobList from "../components/DeliveryJobList";
+import UserProfile from "../components/UserProfile";
 
 const API_ROOT = "http://localhost:8080"
 
 const DeliveryJobContainer = () => {
     const [jobs, setJobs] = useState([]);
     const [userJobs, setUserJobs] = useState([]);
+    const [userProfile, setUserProfile] = useState(null);
 
     const fetchDeliveryJobs = async () => {
         const response = await fetch(`${API_ROOT}/orders`);
@@ -26,9 +28,17 @@ const DeliveryJobContainer = () => {
         console.log(jsonData);
     }
 
+    const fetchUserProfile = async () =>{
+        const response = await fetch (`${API_ROOT}/users/1`);
+        const data = await response.json();
+        setUserProfile(data);  
+
+    }
+
     useEffect(() => {
         fetchDeliveryJobs();
         fetchUserJobs();
+        fetchUserProfile();
     }, [])
 
     const deliveryRoute = createBrowserRouter([
@@ -38,7 +48,8 @@ const DeliveryJobContainer = () => {
             children: [
                 {
                     path: "/profile",
-                    element: (<> <h1>Profile</h1></>)
+                    element: ( <> <UserProfile userProfile={userProfile} /></>)
+
                 },
                 {
                     path: "/profile/:id/edit",
@@ -65,7 +76,7 @@ const DeliveryJobContainer = () => {
             ]
         }
         
-    ])
+    ]);
 
     return ( 
         <>

@@ -154,17 +154,18 @@ Package Table
 ## API Route Table
 
 
-| No. | Route                                   | Description                        |
-|-----|-----------------------------------------|------------------------------------|
-| 1   | GET /delivery/user                      | Retrieve all users                 |
-| 2   | GET /delivery/user/:id                  | Retrieve user profile by ID        |
-| 3   | PUT /delivery/user/:id/edit             | Edit user profile by ID            |
-| 4   | GET /delivery/orders                    | Retrieve all orders                |
-| 5   | PATCH /delivery.order/:id               | Edit order by ID (prior to acceptance) |
-| 6   | GET /delivery/orders/:userId            | Retrieve orders by user ID         |
-| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID |        
-| 8   | GET /orders/:orderId                   | Retrieve customer's order by order ID |
-| 9   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID |
+| No. | Route                                   | Description                        | Link                                        |
+|-----|-----------------------------------------|------------------------------------|---------------------------------------------|
+| 1   | GET /delivery/user                      | Retrieve all users                 | http://localhost:8080/delivery/user |
+| 2   | GET /delivery/user/:id                  | Retrieve user profile by ID        | http://localhost:8080/delivery/user/:id |
+| 3   | PUT /delivery/user/:id/edit             | Edit user profile by ID            | http://localhost:8080/delivery/user/:id/edit |
+| 4   | GET /delivery/orders                    | Retrieve all orders                | http://localhost:8080/delivery/orders |
+| 5   | PATCH /delivery.order/:id               | Edit order by ID (prior to acceptance) | http://localhost:8080/delivery.order/:id |
+| 6   | GET /delivery/orders/:userId            | Retrieve orders by user ID         | http://localhost:8080/delivery/orders/:userId |
+| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID | http://localhost:8080/delivery/orders/:userId/notdelivered|
+| 8   | GET /orders/:orderId                   | Retrieve customer's order by order ID | http://localhost:8080/orders/:orderId |
+| 9   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID | http://localhost:8080/orders/:userId/completedOrders |
+
 
 
 ## Credits and Acknowledgements
