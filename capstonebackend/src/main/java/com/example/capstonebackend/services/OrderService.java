@@ -40,18 +40,9 @@ public class OrderService {
 //    }
 
 
-    public Order updateStatus(Long id, OrderDTO orderDTO){
+    public Order updateDeliveryStatus(Long id, OrderDTO orderDTO){
         Order orderToUpdate = orderRepository.findById(id).get();
-
-        boolean orderAcceptedStatus = orderDTO.isAccepted();
-        boolean orderDeliveryStatus = orderDTO.isDelivered();
-
-        orderToUpdate.setAccepted(orderAcceptedStatus);
-        orderToUpdate.setDelivered(orderDeliveryStatus);
-
-//        if (orderAcceptedStatus){
-//            orderToUpdate.setDelivered(orderDeliveryStatus);
-//        }
+        orderToUpdate.setDelivered(orderDTO.isDelivered());
         orderRepository.save(orderToUpdate);
         return orderToUpdate;
     }

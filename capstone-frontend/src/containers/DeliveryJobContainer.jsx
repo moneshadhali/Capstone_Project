@@ -64,12 +64,31 @@ const DeliveryJobContainer = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        // body: JSON.stringify(),
+        //  body: JSON.stringify(),
       });
       setJobs(jobs.filter((job) => job.id !== id));
       setUserJobs([...userJobs, jobs.find((job) => job.id === id)]);
     }
   };
+
+  const updateDeliveryStatus = async(orderId) => {
+    const order = {
+      "delivered": true
+    }
+
+    if(currentUser){
+      const response = await fetch(`${API_ROOT}/orders/${orderId}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+         body: JSON.stringify(order),
+      })
+
+      const data = await response.json();
+      setUserJobs(userJobs.filter((userJob) => userJob.id !== orderId));
+    }
+  }
 
 
   useEffect(() => {
@@ -118,7 +137,8 @@ const DeliveryJobContainer = () => {
           <Navigation />
           <DeliveryJobList
             jobs={jobs}
-            updateUserJobsStatus={updateUserJobsStatus}
+            updateBtn={updateUserJobsStatus}
+            btnMessage={"Accept"}
           />
         </>
       ),
@@ -130,7 +150,9 @@ const DeliveryJobContainer = () => {
           <Navigation />
           <DeliveryJobList
             jobs={userJobs}
-            updateUserJobsStatus={updateUserJobsStatus}
+            updateBtn={updateDeliveryStatus}
+            // updateBtn={updateUserJobsStatus}
+            btnMessage={"Deliver"}
           />
         </>
       ),

@@ -39,10 +39,10 @@ public class OrderController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Order> updateOrderStatus(@PathVariable Long id, OrderDTO orderDTO){
+    public ResponseEntity<Order> updateOrderStatus(@PathVariable Long id, @RequestBody OrderDTO orderDTO){
         Optional <Order> order = orderService.getOrderById(id);
         if(order.isPresent()){
-            Order orderToUpdate = orderService.updateStatus(id, orderDTO);
+            Order orderToUpdate = orderService.updateDeliveryStatus(id, orderDTO);
             return new ResponseEntity<>(orderToUpdate, HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_MODIFIED);
