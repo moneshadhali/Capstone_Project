@@ -40,7 +40,7 @@ public class OrderService {
 //    }
 
 
-    public Order updateStatus(Long id, OrderDTO orderDTO){
+    public Order updateDeliveryStatus(Long id, OrderDTO orderDTO){
         Order orderToUpdate = orderRepository.findById(id).get();
         orderToUpdate.setDelivered(orderDTO.isDelivered());
         orderRepository.save(orderToUpdate);
