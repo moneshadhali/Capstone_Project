@@ -65,4 +65,7 @@ public class OrderService {
     }
 
 
+    public List<Order> getNonAcceptedOrders() {
+        return orderRepository.findOrderByIsAcceptedIsFalse();
+    }
 }

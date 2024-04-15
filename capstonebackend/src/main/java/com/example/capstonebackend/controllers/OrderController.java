@@ -23,6 +23,12 @@ public class OrderController {
         return ResponseEntity.ok(orders);
     }
 
+    @GetMapping("/not-accepted")
+    public ResponseEntity<List<Order>> getNonAcceptedOrders() {
+        List<Order> orders = orderService.getNonAcceptedOrders();
+        return ResponseEntity.ok(orders);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Order> getOrderById(@PathVariable Long id){
         Optional<Order> foundOrder = orderService.getOrderById(id);
