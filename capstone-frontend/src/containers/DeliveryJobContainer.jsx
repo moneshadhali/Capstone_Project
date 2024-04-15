@@ -18,7 +18,6 @@ const DeliveryJobContainer = () => {
 
   const [currentUser, setCurrentUser] = useState(null);
 
-  const [edit, setEdit] = useState(null);
 
   const fetchDeliveryJobs = async () => {
     const response = await fetch(`${API_ROOT}/orders`);
@@ -39,11 +38,23 @@ const DeliveryJobContainer = () => {
     console.log(jsonData);
   };
 
-  const fetchUserProfile = async (id) => {
-    const response = await fetch(`${API_ROOT}/users/${id}`);
+  const fetchUserProfile = async () => {
+    const response = await fetch(`${API_ROOT}/users/${currentUser}`);
     const data = await response.json();
     setUserProfile(data);
   };
+
+  const updateUser = async (user) => {
+    await fetch(`http://localhost:8080/users/${currentUser}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    });
+    await fetchUserProfile();
+    await fetchUsers();
+}
 
   useEffect(() => {
     fetchDeliveryJobs();
@@ -79,7 +90,8 @@ const DeliveryJobContainer = () => {
         <>
           <Navigation />
           <h1>Edit Profile</h1>
-          <EditUserForm userProfile={userProfile} />
+          <EditUserForm userProfile={userProfile} updateUser={updateUser} />
+
         </>
       ),
     },

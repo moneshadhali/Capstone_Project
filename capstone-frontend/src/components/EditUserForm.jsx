@@ -1,16 +1,26 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 
-const EditUserForm = (userProfile) => {
-    const [newName, setNewName] = useState(null);
+const EditUserForm = ({userProfile, updateUser}) => {
+    const [name, setName] = useState(userProfile.name);
+    const navigate = useNavigate();
 
-    const handleNameChange = (e) =>{
-        setNewName(e.target.value)
-    }
+    // const handleNameChange = (e) =>{
+    //     setName(e.target.value)
+    // }
 
     const handleFormSubmit = async (e) =>{
         e.preventDefault()
+        const updatedUser = {
+            id: userProfile.id,
+            name,
+        }
+        updateUser(updatedUser);
+        navigate("/profile");
     }
+
+
 
     return ( 
         <>
@@ -19,11 +29,14 @@ const EditUserForm = (userProfile) => {
                 New Name: 
                 <input
                 type="text"
-                value="newName"
-                onChange={handleNameChange}
+                value={name}
+                name="name"
+                onChange={(e) => setName(e.target.value)}
                 />
             </label>
-            <button type="submit"> Submit </ button>
+            <input 
+            type="submit" 
+            value ="submit"/>
         </form>
         
         </> 
