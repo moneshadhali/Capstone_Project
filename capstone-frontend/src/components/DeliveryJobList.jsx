@@ -13,10 +13,10 @@ const DeliveryJobList = ({ jobs, updateBtn, btnMessage }) => {
   });
 
   return (
-    <>
+    <section className="job-list">
       <h3>Available Jobs</h3>
       <div>{jobComponents}</div>
-    </>
+    </section>
   );
 };
 

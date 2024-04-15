@@ -10,7 +10,7 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
 
   return (
     <section className="job">
-      <div>
+      <div className="job-details">
         <p>{job.postcode}</p>
         <p>{job.address}</p>
         <p>{job.isAccepted}</p>
