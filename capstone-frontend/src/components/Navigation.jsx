@@ -13,6 +13,7 @@ const Navigation = () => {
                 <li><Link to ="/profile">Profile</Link></li>
                 <li><Link to ="/all-deliveries">All Deliveries</Link></li>
                 <li><Link to ="/my-deliveries">My Deliveries</Link></li>
+                <li><Link to ="/delivery-history">Delivery History</Link></li>
                 <li><Link to ="#" onClick={handleLogout}> Logout </Link></li>
             </ul>
         </nav>
