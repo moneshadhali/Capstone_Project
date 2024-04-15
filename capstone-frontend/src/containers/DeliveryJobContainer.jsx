@@ -5,6 +5,7 @@ import DeliveryJobList from "../components/DeliveryJobList";
 import UserDeliveryJobList from "../components/UserDeliveryJobList";
 import UserProfile from "../components/UserProfile";
 import Login from "../components/Login";
+import EditUserForm from "../components/EditUserForm";
 
 const API_ROOT = "http://localhost:8080";
 
@@ -16,6 +17,8 @@ const DeliveryJobContainer = () => {
   const [userProfile, setUserProfile] = useState({});
 
   const [currentUser, setCurrentUser] = useState(null);
+
+  const [edit, setEdit] = useState(null);
 
   const fetchDeliveryJobs = async () => {
     const response = await fetch(`${API_ROOT}/orders`);
@@ -76,6 +79,7 @@ const DeliveryJobContainer = () => {
         <>
           <Navigation />
           <h1>Edit Profile</h1>
+          <EditUserForm userProfile={userProfile} />
         </>
       ),
     },
