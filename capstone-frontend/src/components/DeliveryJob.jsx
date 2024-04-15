@@ -9,8 +9,8 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   };
 
   return (
-    <>
-      <div className="job"> 
+    <section className="job">
+      <div>
         <p>{job.postcode}</p>
         <p>{job.address}</p>
         <p>{job.isAccepted}</p>
@@ -21,7 +21,7 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
       <div>
         <button onClick={handleUpdateButton}>{btnMessage}</button>
       </div>
-    </>
+    </section>
   );
 };
 

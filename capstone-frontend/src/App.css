@@ -1,11 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color: #EDF6F9;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.job{
-    background-color: #83C5BE;
-    color: black;
+body {
+  background-color: #edf6f9;
+}
+
+.job {
+  background-color: #83c5be;
+  color: black;
+  height: 200px;
+  width: 200px;
 }
