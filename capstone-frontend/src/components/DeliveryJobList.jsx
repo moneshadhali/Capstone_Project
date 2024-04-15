@@ -1,12 +1,13 @@
 import DeliveryJob from "./DeliveryJob";
 
-const DeliveryJobList = ({ jobs, updateBtn }) => {
+const DeliveryJobList = ({ jobs, updateBtn, btnMessage }) => {
   const jobComponents = jobs.map((job) => {
     return (
       <DeliveryJob
         key={job.id}
         job={job}
         updateBtn={updateBtn}
+        btnMessage={btnMessage}
       />
     );
   });

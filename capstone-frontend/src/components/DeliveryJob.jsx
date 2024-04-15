@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const DeliveryJob = ({ job, updateBtn }) => {
+const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   const navigate = useNavigate();
 
   const handleUpdateButton = () => {
@@ -19,7 +19,7 @@ const DeliveryJob = ({ job, updateBtn }) => {
         <p>{job.volume}</p>
       </div>
       <div>
-        <button onClick={handleUpdateButton}>Update</button>
+        <button onClick={handleUpdateButton}>{btnMessage}</button>
       </div>
     </>
   );
