@@ -5,6 +5,7 @@ import DeliveryJobList from "../components/DeliveryJobList";
 import UserDeliveryJobList from "../components/UserDeliveryJobList";
 import UserProfile from "../components/UserProfile";
 import Login from "../components/Login";
+import EditUserForm from "../components/EditUserForm";
 
 const API_ROOT = "http://localhost:8080";
 
@@ -16,6 +17,7 @@ const DeliveryJobContainer = () => {
   const [userProfile, setUserProfile] = useState({});
 
   const [currentUser, setCurrentUser] = useState(null);
+
 
   const fetchDeliveryJobs = async () => {
     const response = await fetch(`${API_ROOT}/orders/not-accepted`);
@@ -36,11 +38,24 @@ const DeliveryJobContainer = () => {
     console.log(jsonData);
   };
 
-  const fetchUserProfile = async (id) => {
-    const response = await fetch(`${API_ROOT}/users/${id}`);
+  const fetchUserProfile = async () => {
+    const response = await fetch(`${API_ROOT}/users/${currentUser}`);
     const data = await response.json();
     setUserProfile(data);
   };
+
+
+  const updateUser = async (user) => {
+    await fetch(`${API_ROOT}/users/${currentUser}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    });
+    await fetchUserProfile();
+    await fetchUsers();
+}
 
   const updateUserJobsStatus = async (id) => {
     if (currentUser) {
@@ -55,6 +70,7 @@ const DeliveryJobContainer = () => {
       setUserJobs([...userJobs, jobs.find((job) => job.id === id)]);
     }
   };
+
 
   useEffect(() => {
     fetchDeliveryJobs();
@@ -90,6 +106,8 @@ const DeliveryJobContainer = () => {
         <>
           <Navigation />
           <h1>Edit Profile</h1>
+          <EditUserForm userProfile={userProfile} updateUser={updateUser} />
+
         </>
       ),
     },
