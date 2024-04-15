@@ -1,15 +1,19 @@
 const DeliveryHistory = ({ orderHistory }) => {
-    // const history = orderHistory.map((order) => {
-    //     return (
-    //         <p>order.customerName</p>
-    //     );
-    //   });
+    const history = orderHistory.map((order, index) => {
+        return (
+            <div key={index}>
+                <p>{order.postcode}</p>
+                <p>{order.address}</p>
+                <p>{order.customerName}</p>
+            </div>
+        );
+    });
 
-    return ( 
+    return (
         <>
-            {/* <p>console.log(orderHistory)</p> */}
+            {history}
         </>
     );
 }
- 
+
 export default DeliveryHistory;

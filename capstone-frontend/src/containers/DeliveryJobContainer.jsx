@@ -47,9 +47,11 @@ const DeliveryJobContainer = () => {
   };
 
   const fetchOrderHistory = async () => {
-    const response = await fetch(`${API_ROOT}/users/${currentUser}/deliveredOrders`);
-    const data = await response.json();
-    setOrderHistory(data);
+    if(currentUser){
+      const response = await fetch(`${API_ROOT}/users/${currentUser}/deliveredOrders`);
+      const data = await response.json();
+      setOrderHistory(data);
+    }
   }
 
 
@@ -102,17 +104,16 @@ const DeliveryJobContainer = () => {
   useEffect(() => {
     fetchDeliveryJobs();
     fetchUsers();
-    updateUser();
   }, []);
-
-  useEffect(() => {
-    fetchOrderHistory();
-  }, [orderHistory])
 
   useEffect(() => {
     fetchUserJobs(currentUser);
     fetchUserProfile(currentUser);
   }, [currentUser]);
+  
+  useEffect(() => {
+    fetchOrderHistory();
+  }, [orderHistory, currentUser])
 
   const deliveryRoute = createBrowserRouter([
     {
