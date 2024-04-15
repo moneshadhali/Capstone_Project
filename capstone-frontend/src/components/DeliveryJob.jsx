@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 
-const DeliveryJob = ({ job, updateUserJobsStatus }) => {
+const DeliveryJob = ({ job, updateBtn }) => {
   const navigate = useNavigate();
 
   const handleUpdateButton = () => {
-    updateUserJobsStatus(job.id);
+    updateBtn(job.id);
     navigate("/my-deliveries");
   };
 

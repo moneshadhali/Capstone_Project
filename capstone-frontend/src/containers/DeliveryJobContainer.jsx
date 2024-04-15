@@ -118,7 +118,7 @@ const DeliveryJobContainer = () => {
           <Navigation />
           <DeliveryJobList
             jobs={jobs}
-            updateUserJobsStatus={updateUserJobsStatus}
+            updateBtn={updateUserJobsStatus}
           />
         </>
       ),
@@ -130,7 +130,7 @@ const DeliveryJobContainer = () => {
           <Navigation />
           <DeliveryJobList
             jobs={userJobs}
-            updateUserJobsStatus={updateUserJobsStatus}
+            updateBtn={updateUserJobsStatus}
           />
         </>
       ),
