@@ -6,12 +6,14 @@ import UserDeliveryJobList from "../components/UserDeliveryJobList";
 import UserProfile from "../components/UserProfile";
 import Login from "../components/Login";
 import EditUserForm from "../components/EditUserForm";
+import DeliveryHistory from "../components/DeliveryHistory";
 
 const API_ROOT = "http://localhost:8080";
 
 const DeliveryJobContainer = () => {
   const [jobs, setJobs] = useState([]);
   const [userJobs, setUserJobs] = useState([]);
+  const [orderHistory, setOrderHistory] = useState([]);
 
   const [users, setUsers] = useState([]);
   const [userProfile, setUserProfile] = useState({});
@@ -44,6 +46,12 @@ const DeliveryJobContainer = () => {
     setUserProfile(data);
   };
 
+  const fetchOrderHistory = async () => {
+    const response = await fetch(`${API_ROOT}/users/${currentUser}/deliveredOrders`);
+    const data = await response.json();
+    setOrderHistory(data);
+  }
+
 
   const updateUser = async (user) => {
     await fetch(`${API_ROOT}/users/${currentUser}`, {
@@ -55,7 +63,7 @@ const DeliveryJobContainer = () => {
     });
     await fetchUserProfile();
     await fetchUsers();
-}
+  }
 
   const updateUserJobsStatus = async (id) => {
     if (currentUser) {
@@ -94,7 +102,12 @@ const DeliveryJobContainer = () => {
   useEffect(() => {
     fetchDeliveryJobs();
     fetchUsers();
+    updateUser();
   }, []);
+
+  useEffect(() => {
+    fetchOrderHistory();
+  }, [orderHistory])
 
   useEffect(() => {
     fetchUserJobs(currentUser);
@@ -162,7 +175,8 @@ const DeliveryJobContainer = () => {
       element: (
         <>
           <Navigation />
-          <h1> Deliverie History</h1>
+          <h1> Delivery History</h1>
+          <DeliveryHistory orderHistory={orderHistory} />
         </>
       ),
     },
