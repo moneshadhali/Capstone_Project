@@ -1,8 +1,14 @@
 import DeliveryJob from "./DeliveryJob";
 
-const DeliveryJobList = ({ jobs }) => {
+const DeliveryJobList = ({ jobs, updateUserJobsStatus }) => {
   const jobComponents = jobs.map((job) => {
-    return <DeliveryJob key={job.id} job={job} />;
+    return (
+      <DeliveryJob
+        key={job.id}
+        job={job}
+        updateUserJobsStatus={updateUserJobsStatus}
+      />
+    );
   });
 
   return (

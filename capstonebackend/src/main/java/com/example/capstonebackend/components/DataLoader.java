@@ -49,10 +49,10 @@ public class DataLoader implements ApplicationRunner {
         userRepository.save(user3);
 
         //Orders
-        Order order1 = new Order(user1, "KT1 3PB", "32 Kingston Road", false, false, "Henry", 40 );
+        Order order1 = new Order(user1, "KT1 3PB", "32 Kingston Road", true, false, "Henry", 40 );
         orderRepository.save(order1);
 
-        Order order2 = new Order(user2,"LU8 3JS", "109 Luton Way", false, false, "Lisa", 20 );
+        Order order2 = new Order(user2,"LU8 3JS", "109 Luton Way", true, false, "Lisa", 20 );
         orderRepository.save(order2);
 
         Order order3 = new Order("SE1  3JS", "109 Clapham Common", false, false, "Jeffrey", 50 );
@@ -60,6 +60,15 @@ public class DataLoader implements ApplicationRunner {
 
         Order order4 = new Order(user1, "H87 3PB", "99 Queen Road", true, true, "Jenny", 60 );
         orderRepository.save(order4);
+
+        Order order5 = new Order("LU8 3JS", "49 Luton Way", false, false, "Martin", 20 );
+        orderRepository.save(order5);
+
+        Order order6 = new Order("SE1  3JS", "19 Clapham Common", false, false, "Johnny", 50 );
+        orderRepository.save(order6);
+
+        Order order7 = new Order( "H87 3PB", "9 Queen Road", false, false, "Sam", 60 );
+        orderRepository.save(order7);
 
         //Packages
         Package package1 = new Package(order1, "Headphones", 1, 300);
@@ -83,5 +92,16 @@ public class DataLoader implements ApplicationRunner {
         Package package7 = new Package(order4, "Ken", 5, 1200);
         packageRepository.save(package7);
 
+        Package package8 = new Package(order5, "Cat", 1, 100);
+        packageRepository.save(package8);
+
+        Package package9 = new Package(order6, "Dog", 5, 1200);
+        packageRepository.save(package9);
+
+        Package package10 = new Package(order7, "Mouse", 1, 100);
+        packageRepository.save(package10);
+
+        Package package11 = new Package(order7, "Squirrel", 5, 1050);
+        packageRepository.save(package11);
     }
 }

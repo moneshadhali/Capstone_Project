@@ -20,7 +20,7 @@ const DeliveryJobContainer = () => {
 
 
   const fetchDeliveryJobs = async () => {
-    const response = await fetch(`${API_ROOT}/orders`);
+    const response = await fetch(`${API_ROOT}/orders/not-accepted`);
     const jsonData = await response.json();
     setJobs(jsonData);
   };
@@ -44,8 +44,9 @@ const DeliveryJobContainer = () => {
     setUserProfile(data);
   };
 
+
   const updateUser = async (user) => {
-    await fetch(`http://localhost:8080/users/${currentUser}`, {
+    await fetch(`${API_ROOT}/users/${currentUser}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"
@@ -55,6 +56,21 @@ const DeliveryJobContainer = () => {
     await fetchUserProfile();
     await fetchUsers();
 }
+
+  const updateUserJobsStatus = async (id) => {
+    if (currentUser) {
+      await fetch(`${API_ROOT}/users/${currentUser}/orders/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // body: JSON.stringify(),
+      });
+      setJobs(jobs.filter((job) => job.id !== id));
+      setUserJobs([...userJobs, jobs.find((job) => job.id === id)]);
+    }
+  };
+
 
   useEffect(() => {
     fetchDeliveryJobs();
@@ -100,7 +116,10 @@ const DeliveryJobContainer = () => {
       element: (
         <>
           <Navigation />
-          <DeliveryJobList jobs={jobs} />
+          <DeliveryJobList
+            jobs={jobs}
+            updateUserJobsStatus={updateUserJobsStatus}
+          />
         </>
       ),
     },
@@ -109,7 +128,10 @@ const DeliveryJobContainer = () => {
       element: (
         <>
           <Navigation />
-          <DeliveryJobList jobs={userJobs} />
+          <DeliveryJobList
+            jobs={userJobs}
+            updateUserJobsStatus={updateUserJobsStatus}
+          />
         </>
       ),
     },

@@ -1,4 +1,13 @@
-const DeliveryJob = ({ job }) => {
+import { useNavigate } from "react-router-dom";
+
+const DeliveryJob = ({ job, updateUserJobsStatus }) => {
+  const navigate = useNavigate();
+
+  const handleUpdateButton = () => {
+    updateUserJobsStatus(job.id);
+    navigate("/my-deliveries");
+  };
+
   return (
     <>
       <div>
@@ -8,6 +17,9 @@ const DeliveryJob = ({ job }) => {
         <p>{job.isDelivered}</p>
         <p>{job.customerName}</p>
         <p>{job.volume}</p>
+      </div>
+      <div>
+        <button onClick={handleUpdateButton}>Update</button>
       </div>
     </>
   );
