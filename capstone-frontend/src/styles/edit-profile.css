@@ -56,3 +56,11 @@
   color: black;
 }
 
+
+.edit-btn{
+  text-transform: uppercase;
+  height: 45px;
+  width: 100px;
+  background-color: #5ec4ba;
+  color: white;
+}
