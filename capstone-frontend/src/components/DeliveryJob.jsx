@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   const navigate = useNavigate();
@@ -6,6 +7,11 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   const handleUpdateButton = () => {
     updateBtn(job.id);
     navigate("/my-deliveries");
+  };
+
+  const [open, setOpen] = useState(false);
+  const toggle = () => {
+    setOpen(!open);
   };
 
   const packageList = job.packages.map((pack) => {
@@ -24,7 +30,13 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
           <p>Postcode: {job.postcode}</p>
           <p>Order Volume:{job.volume}</p>
         </div>
-        <ul>Packages: {packageList}</ul>
+        {/* <ul>Packages: {packageList}</ul> */}
+        <button onClick={toggle}>View Packages</button>
+        {open && ( 
+          <div>
+            {packageList}
+          </div>
+        )}
         <div className="map">
           <iframe
             title="map"
