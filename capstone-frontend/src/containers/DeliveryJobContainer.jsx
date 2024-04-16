@@ -20,7 +20,6 @@ const DeliveryJobContainer = () => {
 
   const [currentUser, setCurrentUser] = useState(null);
 
-
   const fetchDeliveryJobs = async () => {
     const response = await fetch(`${API_ROOT}/orders/not-accepted`);
     const jsonData = await response.json();
@@ -47,25 +46,26 @@ const DeliveryJobContainer = () => {
   };
 
   const fetchOrderHistory = async () => {
-    if(currentUser){
-      const response = await fetch(`${API_ROOT}/users/${currentUser}/deliveredOrders`);
+    if (currentUser) {
+      const response = await fetch(
+        `${API_ROOT}/users/${currentUser}/deliveredOrders`
+      );
       const data = await response.json();
       setOrderHistory(data);
     }
-  }
-
+  };
 
   const updateUser = async (user) => {
     await fetch(`${API_ROOT}/users/${currentUser}`, {
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
     });
     await fetchUserProfile();
     await fetchUsers();
-  }
+  };
 
   const updateUserJobsStatus = async (id) => {
     if (currentUser) {
@@ -81,25 +81,24 @@ const DeliveryJobContainer = () => {
     }
   };
 
-  const updateDeliveryStatus = async(orderId) => {
+  const updateDeliveryStatus = async (orderId) => {
     const order = {
-      "delivered": true
-    }
+      delivered: true,
+    };
 
-    if(currentUser){
+    if (currentUser) {
       const response = await fetch(`${API_ROOT}/orders/${orderId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
-         body: JSON.stringify(order),
-      })
+        body: JSON.stringify(order),
+      });
 
       const data = await response.json();
       setUserJobs(userJobs.filter((userJob) => userJob.id !== orderId));
     }
-  }
-
+  };
 
   useEffect(() => {
     fetchDeliveryJobs();
@@ -110,10 +109,10 @@ const DeliveryJobContainer = () => {
     fetchUserJobs(currentUser);
     fetchUserProfile(currentUser);
   }, [currentUser]);
-  
+
   useEffect(() => {
     fetchOrderHistory();
-  }, [orderHistory, currentUser])
+  }, [orderHistory, currentUser]);
 
   const deliveryRoute = createBrowserRouter([
     {
@@ -140,7 +139,6 @@ const DeliveryJobContainer = () => {
           <Navigation />
           <h1>Edit Profile</h1>
           <EditUserForm userProfile={userProfile} updateUser={updateUser} />
-
         </>
       ),
     },
@@ -176,7 +174,6 @@ const DeliveryJobContainer = () => {
       element: (
         <>
           <Navigation />
-          <h1> Delivery History</h1>
           <DeliveryHistory orderHistory={orderHistory} />
         </>
       ),
