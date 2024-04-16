@@ -18,8 +18,10 @@ body {
   background-color: #83c5be;
   border-radius: 15px;
   color: black;
-  height: 200px;
-  width: 200px;
+  height: 260px;
+  width: 350px;
+  flex-direction: column;
+  margin-bottom: 10px;
 
   /* display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -31,3 +33,8 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+
+/* map {
+  margin-top: 5px;
+} */

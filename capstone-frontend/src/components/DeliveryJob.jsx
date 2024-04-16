@@ -11,12 +11,17 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   return (
     <section className="job">
       <div className="job-details">
-        <p>{job.postcode}</p>
-        <p>{job.address}</p>
-        <p>{job.isAccepted}</p>
-        <p>{job.isDelivered}</p>
-        <p>{job.customerName}</p>
-        <p>{job.volume}</p>
+        <p>Customer: {job.customerName}</p>
+        <p>Address: {job.address}</p>
+        <p>Postcode: {job.postcode}</p>
+        <p>Order Volume:{job.volume}</p>
+      </div>
+      <div className="map">
+      <iframe
+        title="map"
+        src={`https://maps.google.com/maps?q=${encodeURIComponent(job.address)}&z=15&output=embed`}
+      ></iframe>
+      
       </div>
       <div>
         <button onClick={handleUpdateButton}>{btnMessage}</button>
