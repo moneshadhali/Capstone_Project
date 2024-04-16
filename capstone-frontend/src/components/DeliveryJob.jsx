@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../styles/delivery-jobs.css";
 
 const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   const navigate = useNavigate();
@@ -9,17 +10,20 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   };
 
   return (
-    <section className="job">
+    <section className="job-listing">
       <div className="job-details">
-        <p>{job.postcode}</p>
         <p>{job.address}</p>
-        <p>{job.isAccepted}</p>
-        <p>{job.isDelivered}</p>
-        <p>{job.customerName}</p>
-        <p>{job.volume}</p>
-      </div>
-      <div>
-        <button onClick={handleUpdateButton}>{btnMessage}</button>
+        <p>{job.postcode}</p>
+        <p>
+          <span>Volume: </span> {job.volume} cm<span className="volume">3</span>
+        </p>
+        <p>
+          <span>Recipient: </span>
+          {job.customerName}
+        </p>
+        <button className="accept-btn" onClick={handleUpdateButton}>
+          {btnMessage}
+        </button>
       </div>
     </section>
   );

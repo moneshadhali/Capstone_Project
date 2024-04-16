@@ -1,0 +1,24 @@
+nav {
+  width: 300px;
+  margin: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #2dc0b1;
+}
+
+.logout:hover {
+  color: #ff00008e;
+}

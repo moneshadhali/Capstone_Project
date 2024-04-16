@@ -1,4 +1,5 @@
 import DeliveryJob from "./DeliveryJob";
+import "../styles/delivery-jobs.css";
 
 const DeliveryJobList = ({ userJobs }) => {
   const jobComponents = userJobs.map((job) => {
@@ -7,7 +8,7 @@ const DeliveryJobList = ({ userJobs }) => {
 
   return (
     <>
-      <h3>Accepted Jobs</h3>
+      <h3 className="delivery-h3">Accepted Jobs</h3>
       <div>{jobComponents}</div>
     </>
   );
