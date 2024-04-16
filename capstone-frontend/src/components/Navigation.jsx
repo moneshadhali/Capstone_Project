@@ -1,6 +1,5 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import "../styles/navigation.css";
-// import Logout from "./Logout";
+import Logout from "./Logout";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -25,7 +24,8 @@ const Navigation = () => {
           </li>
           <li>
             <Link to="#" onClick={handleLogout}>
-              <span className="logout">Logout</span>
+              {" "}
+              Logout{" "}
             </Link>
           </li>
         </ul>
