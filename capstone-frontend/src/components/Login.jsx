@@ -24,7 +24,7 @@ const Login = ({ users, setCurrentUser }) => {
   return (
     <div className="login-container">
       <div className="login-child">
-      <p>Login</p>
+        <h4>Login</h4>
         <form onSubmit={handleLogin}>
           <select
             name="user"
@@ -37,11 +37,10 @@ const Login = ({ users, setCurrentUser }) => {
             </option>
             {userOptions}
           </select>
-
-          <input type="submit" value="Log in" />
+          <input type="submit" value="Log in" className="login-btn"/>
         </form>
-        </div>
       </div>
+    </div>
   );
 };
 
