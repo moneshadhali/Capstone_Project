@@ -13,4 +13,48 @@
     width: 400px;
     margin-bottom: 10px;
   }
+
+  .profile-details {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  .profile-details p span {
+    font-weight: 600;
+  }
+
+  .name{
+    background-color: #83c5be;
+    border-radius: 10px;
+    border: #5ec4ba 5px solid;
+  }
+
+  .region{
+    background-color: #83c5be;
+    border-radius: 10px;
+    border: #5ec4ba 5px solid;
+  }
+
+  .location{
+    background-color: #83c5be;
+    border-radius: 10px;
+    border: #5ec4ba 5px solid;
+  }
+
+  .edit-btn{
+    font: inherit;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    color: black;
+  }
+
+  .edit-btn:hover{
+    background-color: #5ec4ba;
+    color: black;
+  }
 }

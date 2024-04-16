@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import "../styles/edit-profile.css";
 
 
 const EditUserForm = ({userProfile, updateUser}) => {
@@ -24,20 +25,30 @@ const EditUserForm = ({userProfile, updateUser}) => {
 
     return ( 
         <>
+        <section className="edit-name">
+        <h3 className = "title">Edit Profile</h3>
+        <div className="new-name">
         <form onSubmit={handleFormSubmit}>
             <label>
-                New Name: 
+                <div className="new-name-title">
+                <span> New Name: </span>
+                </div>
                 <input
+                className="edit-bar"
                 type="text"
                 value={name}
                 name="name"
                 onChange={(e) => setName(e.target.value)}
                 />
             </label>
+            
             <input 
+            className="name-edit-btn"
             type="submit" 
             value ="submit"/>
         </form>
+        </div>
+        </section>
         
         </> 
         

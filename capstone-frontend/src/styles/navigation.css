@@ -20,7 +20,10 @@
   nav ul a:hover {
     color: #2dc0b1;
   }
-
+  
+  .logout:hover {
+  color: #ff00008e;
+  }
 
   .menu-toggle {
     position: absolute;
