@@ -1,4 +1,5 @@
 import DeliveryJob from "./DeliveryJob";
+import "../styles/delivery-jobs.css";
 
 const DeliveryJobList = ({ jobs, updateBtn, btnMessage }) => {
   const jobComponents = jobs.map((job) => {
@@ -14,8 +15,8 @@ const DeliveryJobList = ({ jobs, updateBtn, btnMessage }) => {
 
   return (
     <section className="job-list">
-      <h3>Available Jobs</h3>
-      <div>{jobComponents}</div>
+      <h3 className="delivery-h3">Available Jobs</h3>
+      <div className="job-components">{jobComponents}</div>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import "../styles/delivery-jobs.css";
 
 const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
     updateBtn(job.id);
     navigate("/my-deliveries");
   };
+
 
   const [open, setOpen] = useState(false);
   const toggle = () => {
@@ -22,13 +24,12 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
 
   if (job) {
     return (
-
-      <section className="job">
+      <section className="job-listing">
         <div className="job-details">
-          <p>Customer: {job.customerName}</p>
+          <p><span>Recipient: </span> {job.customerName}</p>
           <p>Address: {job.address}</p>
           <p>Postcode: {job.postcode}</p>
-          <p>Order Volume:{job.volume}</p>
+          <p><span>Volume: </span> {job.volume} cm<span className="volume">3</span></p>
         </div>
         {/* <ul>Packages: {packageList}</ul> */}
         <button onClick={toggle}>View Packages</button>
@@ -43,14 +44,15 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
             src={`https://maps.google.com/maps?q=${encodeURIComponent(job.address)}&z=15&output=embed`}
           ></iframe>
         </div>
-        <div>
-          <button onClick={handleUpdateButton}>{btnMessage}</button>
-        </div>
+       <button className="accept-btn" onClick={handleUpdateButton}>
+          {btnMessage}
+        </button>
       </section>
     );
   } else {
     return <></>;
   }
+
 };
 
 export default DeliveryJob;
