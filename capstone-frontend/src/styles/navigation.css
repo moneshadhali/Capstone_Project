@@ -15,7 +15,7 @@ a {
   color: black;
 }
 
-a:hover {
+nav ul a:hover {
   color: #2dc0b1;
 }
 
