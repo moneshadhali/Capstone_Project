@@ -1,6 +1,6 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import "../styles/navigation.css";
-import { useState } from "react";
+import { useState } from "react"
 
 const Navigation = () => {
 
