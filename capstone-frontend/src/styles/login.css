@@ -1,0 +1,24 @@
+.login-container {
+    /* background-color: #006D77;
+    margin: auto;
+    width: 50%;
+    padding: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDF6F9;
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-child{
+    width: auto;
+    height: 150px;
+    background-color: #006D77;
+    border-radius: 5%;
+}
+
+.login-child form{
+    background-color: blueviolet;
+    padding: 30px;
+}

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../styles/login.css";
 
 const Login = ({ users, setCurrentUser }) => {
   const navigate = useNavigate();
@@ -21,9 +22,9 @@ const Login = ({ users, setCurrentUser }) => {
   };
 
   return (
-    <>
+    <div className="login-container">
+      <div className="login-child">
       <p>Login</p>
-      <div>
         <form onSubmit={handleLogin}>
           <select
             name="user"
@@ -39,8 +40,8 @@ const Login = ({ users, setCurrentUser }) => {
 
           <input type="submit" value="Log in" />
         </form>
+        </div>
       </div>
-    </>
   );
 };
 
