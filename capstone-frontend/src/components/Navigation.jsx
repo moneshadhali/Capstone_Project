@@ -1,4 +1,5 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
+import "../styles/navigation.css";
 import Logout from "./Logout";
 
 const Navigation = () => {
