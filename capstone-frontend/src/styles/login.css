@@ -1,3 +1,14 @@
+header{
+    width: 100vw;
+    height: 8vh;
+    background-color: #006D77;
+}
+
+header img{
+    height: 30px;
+    width: 30px;
+}
+
 .login-container {
     /* background-color: #006D77;
     margin: auto;
@@ -8,7 +19,7 @@
     justify-content: center;
     background-color: #FFFFFF;
     color: #FFFFFF;
-    height: 100vh;
+    height: 92vh;
     width: 100vw;
 }
 
@@ -51,7 +62,6 @@
     border: 2px solid #E27160;
 }
 @media only screen and (max-width: 600px) {
-    
     .login-child{
         width: auto;
         height: 30%;

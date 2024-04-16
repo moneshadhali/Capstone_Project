@@ -22,6 +22,10 @@ const Login = ({ users, setCurrentUser }) => {
   };
 
   return (
+    <>
+    <header>
+      <img src="images/logo.png" alt="logo"/>
+    </header>
     <div className="login-container">
       <div className="login-child">
         <h4>Login</h4>
@@ -41,6 +45,7 @@ const Login = ({ users, setCurrentUser }) => {
         </form>
       </div>
     </div>
+    </>
   );
 };
 
