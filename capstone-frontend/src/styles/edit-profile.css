@@ -1,0 +1,58 @@
+.edit-name{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  font-size: 20px;
+
+  height: 250px;
+  width: 400px;
+  margin-bottom: 10px; 
+
+}
+
+.title{
+    background-color: #83c5be;
+    border-radius: 10px;
+    border: #5ec4ba 5px solid;
+}
+
+.new-name{
+    background-color: #83c5be;
+    border-radius: 10px;
+    border: #83c5be 10px solid;
+    
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+
+
+.new-name p span{
+    font-weight: 600;
+}
+
+
+.new-name-title{
+    font-weight: 600;
+}
+
+.name-edit-btn{
+  font: inherit;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  height: 20px;
+  width: 70px;
+  border-radius: 10px;
+  color: black;
+}
+
+.name-edit-btn:hover{
+  background-color: #5ec4ba;
+  color: black;
+}
+
