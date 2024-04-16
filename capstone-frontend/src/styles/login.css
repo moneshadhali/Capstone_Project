@@ -10,10 +10,6 @@ header img{
 }
 
 .login-container {
-    /* background-color: #006D77;
-    margin: auto;
-    width: 50%;
-    padding: 10px; */
     display: flex;
     align-items: center;
     justify-content: center;
