@@ -137,7 +137,6 @@ const DeliveryJobContainer = () => {
       element: (
         <>
           <Navigation />
-          <h1>Edit Profile</h1>
           <EditUserForm userProfile={userProfile} updateUser={updateUser} />
         </>
       ),
