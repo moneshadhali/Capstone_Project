@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "../styles/login.css";
 
 const Login = ({ users, setCurrentUser }) => {
   const navigate = useNavigate();
@@ -22,8 +23,12 @@ const Login = ({ users, setCurrentUser }) => {
 
   return (
     <>
-      <p>Login</p>
-      <div>
+    <header>
+      <img src="images/logo.png" alt="logo"/>
+    </header>
+    <div className="login-container">
+      <div className="login-child">
+        <h4>Login</h4>
         <form onSubmit={handleLogin}>
           <select
             name="user"
@@ -36,10 +41,10 @@ const Login = ({ users, setCurrentUser }) => {
             </option>
             {userOptions}
           </select>
-
-          <input type="submit" value="Log in" />
+          <input type="submit" value="Log in" className="login-btn"/>
         </form>
       </div>
+    </div>
     </>
   );
 };
