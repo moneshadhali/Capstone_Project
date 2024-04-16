@@ -10,7 +10,6 @@ const Navigation = () => {
 
   const handleLogout = () => {
     navigate("/");
-    setMenuOpen(false);
   };
 
   const toggleMenu=() => {
@@ -29,7 +28,7 @@ const Navigation = () => {
                 <span className="burger"></span>
                 <span className="burger"></span>
       </button>
-      <ul className={`menu ${menuOpen ? "open" : ""}`}>
+      <ul className={`menu ${menuOpen ? "open" : "close"}`}>
           <li>
             <Link to="/profile" onClick={closeMenu}>Profile</Link>
           </li>
