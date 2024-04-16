@@ -17,6 +17,10 @@ const Navigation = () => {
     setMenuOpen(!menuOpen)
   }
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+}
+
   return (
     <>
       <nav className="navbar">
@@ -27,16 +31,16 @@ const Navigation = () => {
       </button>
       <ul className={`menu ${menuOpen ? "open" : ""}`}>
           <li>
-            <Link to="/profile">Profile</Link>
+            <Link to="/profile" onClick={closeMenu}>Profile</Link>
           </li>
           <li>
-            <Link to="/all-deliveries">All Deliveries</Link>
+            <Link to="/all-deliveries" onClick={closeMenu}>All Deliveries</Link>
           </li>
           <li>
-            <Link to="/my-deliveries">My Deliveries</Link>
+            <Link to="/my-deliveries" onClick={closeMenu}>My Deliveries</Link>
           </li>
           <li>
-            <Link to="/delivery-history">Delivery History</Link>
+            <Link to="/delivery-history" onClick={closeMenu}>Delivery History</Link>
           </li>
           <li>
             <Link to="#" onClick={handleLogout}>
