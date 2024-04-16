@@ -3,10 +3,10 @@ import "../styles/delivery-jobs.css";
 const DeliveryHistory = ({ orderHistory }) => {
   const history = orderHistory.map((order, index) => {
     return (
-      <div key={index}>
-        <p>{order.postcode}</p>
-        <p>{order.address}</p>
-        <p>{order.customerName}</p>
+      <div className="history-listing" key={index}>
+        <p>Order Ref. {order.id}</p>
+        <p>Post Code: {order.postcode}</p>
+        <p>Address: {order.address}</p>
       </div>
     );
   });
@@ -14,7 +14,9 @@ const DeliveryHistory = ({ orderHistory }) => {
   return (
     <>
       <h3 className="delivery-h3">Delivery History</h3>
-      <div className="">{history}</div>
+      <div className="history">
+        <div className="">{history}</div>
+      </div>
     </>
   );
 };
