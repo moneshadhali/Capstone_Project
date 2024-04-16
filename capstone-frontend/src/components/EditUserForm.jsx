@@ -21,8 +21,6 @@ const EditUserForm = ({userProfile, updateUser}) => {
         navigate("/profile");
     }
 
-
-
     return ( 
         <>
         <section className="edit-name">
@@ -49,6 +47,7 @@ const EditUserForm = ({userProfile, updateUser}) => {
         </form>
         </div>
         </section>
+        <button onClick={() => navigate("/profile")}>Back To Profile</button>
         
         </> 
         
