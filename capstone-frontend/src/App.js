@@ -3,9 +3,9 @@ import DeliveryJobContainer from "./containers/DeliveryJobContainer";
 
 function App() {
   return (
-    <>
+    <section className="app">
       <DeliveryJobContainer />
-    </>
+    </section>
   );
 }
 
