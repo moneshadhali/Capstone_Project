@@ -1,11 +1,13 @@
 header{
     width: 100vw;
     height: 8vh;
+    background-color: #006D77;
 }
 
 header img{
     height: 100%;
     width: auto;
+    border-radius: 1%;
 }
 
 .login-container {
