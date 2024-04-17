@@ -27,9 +27,9 @@ const Login = ({ users, setCurrentUser }) => {
     <header>
       <img className="company-logo" src="images/logo.png" alt="logo"/>
       <div className="welcome">
-      <h2>Welcome</h2>
-      <h3>Shot Put Delivery</h3>
-    </div>
+        <h2>Welcome</h2>
+        <h3>Shot Put Delivery</h3>
+      </div>
     </header>
    
 
