@@ -15,6 +15,7 @@
 <a id="introduction"></a>
 ## Introduction
 In response to the growing need for efficient delivery systems within RainforestRetail's expanding warehouse network, our project aims to develop a versatile delivery application. This project aims to enhance operational efficiency by implementing a versatile application capable of seamlessly integrating across various warehouses, thereby eradicating logistical bottlenecks within the distribution network. By optimizing the delivery system on a regional basis, the application seeks to amplify the order capacity, resulting in reduced delivery times for customers and ensuring prompt updates on delivery schedules, thereby enhancing overall customer satisfaction and loyalty.
+With this in mind, we have envisioned the delivery drivers as our end user and will approach our design with a mobile-first methodology.
 
 <a id="technology"></a>
 ## Technology
