@@ -7,7 +7,7 @@ const DeliveryHistory = ({ orderHistory }) => {
         <p>
           <span className="bold-text">Order Ref.</span> {order.id}
         </p>
-        <p className="grid-start-1">
+        <p>
           <span className="bold-text">Postcode:</span>
           {order.postcode}
         </p>
@@ -20,7 +20,7 @@ const DeliveryHistory = ({ orderHistory }) => {
 
   return (
     <>
-      <h3 className="delivery-h3">Delivery History</h3>
+      <h2>Delivery History</h2>
       <div className="history">
         <div className="">{history}</div>
       </div>

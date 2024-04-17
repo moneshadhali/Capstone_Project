@@ -99,29 +99,21 @@
   /* Delivery History */
 
   .history {
-    padding-top: 50px;
+    padding-top: 5%;
   }
 
   .history-listing {
     display: grid;
-    gap: 20px;
-    align-items: center;
-    justify-items: center;
-    text-align: center;
+    padding-bottom: 1%;
     font-size: 1rem;
     margin: 0 auto;
-    width: 95%;
-    height: 120px;
+    width: 80%;
     padding: 10px;
     margin-bottom: 16px;
     background-color: #83c5be;
     border-radius: 15px;
     border: 1px solid #ddd;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .grid-start-1 {
-    grid-column-start: 1;
   }
 
   .bold-text {
