@@ -5,7 +5,7 @@ const DeliveryHistory = ({ orderHistory }) => {
     return (
       <div className="history-listing" key={index}>
         <p>Order Ref. {order.id}</p>
-        <p>Post Code: {order.postcode}</p>
+        <p>Postcode: {order.postcode}</p>
         <p>Address: {order.address}</p>
       </div>
     );
