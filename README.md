@@ -135,7 +135,7 @@ Shot Put Delivery is built on the following technologies:
 ![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/af33b94f-d007-46de-8de8-f534c505efbe)
 
 
-## Retro ##
+## Retrospectic (Completed mid-way through project) ##
 
 Link: https://metroretro.io/BOTRKBDV2K7N
 ![Screenshot 2024-04-12 at 11 14 05](https://github.com/moneshadhali/Capstone_Project/assets/148503750/5bec7282-a78b-4608-b76a-1c0ff7cd1b7f)
