@@ -154,17 +154,28 @@ Package Table
 ## API Route Table
 
 
-| No. | Route                                   | Description                        | Link                                        |
-|-----|-----------------------------------------|------------------------------------|---------------------------------------------|
-| 1   | GET /delivery/user                      | Retrieve all users                 | http://localhost:8080/delivery/user |
-| 2   | GET /delivery/user/:id                  | Retrieve user profile by ID        | http://localhost:8080/delivery/user/:id |
-| 3   | PUT /delivery/user/:id/edit             | Edit user profile by ID            | http://localhost:8080/delivery/user/:id/edit |
-| 4   | GET /delivery/orders                    | Retrieve all orders                | http://localhost:8080/delivery/orders |
-| 5   | PATCH /delivery.order/:id               | Edit order by ID (prior to acceptance) | http://localhost:8080/delivery.order/:id |
-| 6   | GET /delivery/orders/:userId            | Retrieve orders by user ID         | http://localhost:8080/delivery/orders/:userId |
-| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID | http://localhost:8080/delivery/orders/:userId/notdelivered|
-| 8   | GET /orders/:orderId                   | Retrieve customer's order by order ID | http://localhost:8080/orders/:orderId |
-| 9   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID | http://localhost:8080/orders/:userId/completedOrders |
+## API Routes
+
+### Users
+
+| No. | Route                                   | Description                                    | Link                                           |
+|-----|-----------------------------------------|------------------------------------------------|------------------------------------------------|
+| 1   | GET /users                              | Retrieve all users                             | [Link](http://localhost:8080/users)           |
+| 2   | GET /users/:id                          | Retrieve user profile by ID                     | [Link](http://localhost:8080/users/:id)       |
+| 3   | PATCH /users/:id                        | Edit user profile by ID                        | [Link](http://localhost:8080/users/:id)       |
+| 4   | GET /users/:userId/orders               | Retrieve orders by user ID                     | [Link](http://localhost:8080/users/:userId/orders) |
+| 5   | GET /users/:userId/notDeliveredOrders   | Retrieve orders not delivered by user ID       | [Link](http://localhost:8080/users/:userId/notDeliveredOrders) |
+| 6   | GET /users/:userId/deliveredOrders      | Retrieve orders delivered by user ID           | [Link](http://localhost:8080/users/:userId/deliveredOrders) |
+| 7   | PATCH /users/:userId/orders/:orderId    | Edit order by user ID and order ID             | [Link](http://localhost:8080/users/:userId/orders/:orderId) |
+
+### Orders
+
+| No. | Route                                   | Description                                    | Link                                           |
+|-----|-----------------------------------------|------------------------------------------------|------------------------------------------------|
+| 1   | GET /orders                             | Retrieve all orders                            | [Link](http://localhost:8080/orders)          |
+| 2   | GET /orders/:orderId                    | Retrieve order by order ID                     | [Link](http://localhost:8080/orders/:orderId) |
+| 3   | PATCH /orders/:orderId                  | Edit order by order ID                         | [Link](http://localhost:8080/orders/:orderId) |
+| 4   | GET /not-accepted                       | Retrieve orders that are not yet accepted      | [Link](http://localhost:8080/not-accepted)   |
 
 
 
