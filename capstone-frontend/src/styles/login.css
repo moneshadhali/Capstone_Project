@@ -7,7 +7,7 @@ header{
 header img{
     height: 100%;
     width: auto;
-    border-radius: 1%;
+    border-radius: 1;
 }
 
 .login-container {
@@ -65,6 +65,7 @@ header img{
     display: grid;
     gap: 10px;
     color: #E27160;
+    margin-top: 40%;
 }
 
 @media only screen and (max-width: 600px) {
