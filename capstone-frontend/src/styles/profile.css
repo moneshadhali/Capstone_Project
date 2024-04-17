@@ -91,31 +91,31 @@
     background-color: #83C5BE;
     border-radius: 10px;
     
-}
+  }
 
-label{
-  border: none;
-}
+  label{
+    border: none;
+  }
 
-.submit-btn{
-  background-color: #83C5BE;
-  text-transform: uppercase;
-  font: inherit;
-}
+  .submit-btn{
+    background-color: #83C5BE;
+    text-transform: uppercase;
+    font: inherit;
+  }
 
-.submit-btn:hover{
-  background-color: #006D77
-}
+  .submit-btn:hover{
+    background-color: #006D77
+  }
 
-.btp-btn{
-  background-color:#e28f71;
-  text-transform: uppercase;
-  font: inherit;
-}
+  .btp-btn{
+    background-color:#e28f71;
+    text-transform: uppercase;
+    font: inherit;
+  }
 
-.btp-btn:hover{
-  background-color: #dc6d45;
-}
+  .btp-btn:hover{
+    background-color: #dc6d45;
+  }
 
 
 

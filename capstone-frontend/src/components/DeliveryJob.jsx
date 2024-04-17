@@ -16,7 +16,7 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
   if (job) {
     return (
       <section className="job-listing">
-        <div className="job-details">
+        
           <p>
             <span>Recipient: </span> {job.customerName}
           </p>
@@ -34,15 +34,13 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
           <button className="accept-btn" onClick={handleUpdateButton}>
             {btnMessage}
           </button>
-        </div>
-        <div className="map">
           <iframe
             title="map"
             src={`https://maps.google.com/maps?q=${encodeURIComponent(
               job.address
             )}&z=15&output=embed`}
           ></iframe>
-        </div>
+       
       </section>
     );
   } else {
