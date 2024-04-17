@@ -31,8 +31,8 @@ Shot Put Delivery is built on the following technologies:
 - CSS: For styling and presenting the content elegantly.
 
 **React Libraries Used:**
-- react-router-dom
-- react
+- React Router DOM
+- React
   
 **React Hooks Used:**
 - useState
@@ -178,7 +178,6 @@ Package Table
 ## API Route Table
 
 
-## API Routes
 
 ### Users
 
