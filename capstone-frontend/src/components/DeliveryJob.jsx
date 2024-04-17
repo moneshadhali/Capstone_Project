@@ -13,28 +13,14 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
     navigate("/my-deliveries");
   };
 
-  // const [open, setOpen] = useState(false);
-  // const toggle = () => {
-  //   setOpen(!open);
-  // };
-
-  // const packageList = job.packages.map((pack) => {
-  //   return <li>{pack.product_name}</li>;
-  // });
-
   if (job) {
     return (
       <section className="job-listing">
-        <div className="job-details">
           <p>
             <span>Recipient: </span> {job.customerName}
           </p>
           <p>Address: {job.address}</p>
           <p>Postcode: {job.postcode}</p>
-
-          {/* <ul>Packages: {packageList}</ul> */}
-          {/* <button onClick={toggle}>View Packages</button>
-          {open && <div>{packageList}</div>} */}
 
           <button className="view-packages-btn" onClick={() => setShowPackages(true)}>View Packages</button>
           {showPackages && (
@@ -44,18 +30,14 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
             />
           )}
 
-          <button className="accept-btn" onClick={handleUpdateButton}>
-            {btnMessage}
-          </button>
-        </div>
-        <div className="map">
+          <button className="accept-btn" onClick={handleUpdateButton}>{btnMessage}</button>
           <iframe
             title="map"
             src={`https://maps.google.com/maps?q=${encodeURIComponent(
               job.address
             )}&z=15&output=embed`}
           ></iframe>
-        </div>
+       
       </section>
     );
   } else {
