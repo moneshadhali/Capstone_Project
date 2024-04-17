@@ -10,6 +10,7 @@
     margin-top: 16%;
     padding: 0 8%;
     color: #00494f;
+    text-align: center;
   }
 
   h1{
@@ -61,6 +62,22 @@
     height: 100%;
     width: auto;
     border-radius: 1%;
+  }
+
+  .edit-btn{
+    font: inherit;
+    text-transform: uppercase;
+    background-color: #e28f71;
+  }
+
+  .edit-btn a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .edit-btn:hover {
+    background-color: #dc6d45;
+    color: #83C5BE;
   }
 
   /* this is related to order-status */

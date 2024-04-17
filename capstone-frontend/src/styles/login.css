@@ -65,7 +65,8 @@ header img{
     display: grid;
     gap: 10px;
     color: #E27160;
-    margin-top: 40%;
+    margin-top: 30%;
+    font-size: 1.5em;
 }
 
 @media only screen and (max-width: 600px) {

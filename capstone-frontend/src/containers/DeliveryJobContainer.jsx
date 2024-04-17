@@ -156,6 +156,7 @@ const DeliveryJobContainer = () => {
             jobs={jobs}
             updateBtn={updateUserJobsStatus}
             btnMessage={"Accept"}
+            title={"All Deliveries"}
           />
         </>
       ),
@@ -170,6 +171,7 @@ const DeliveryJobContainer = () => {
             updateBtn={updateDeliveryStatus}
             // updateBtn={updateUserJobsStatus}
             btnMessage={"Deliver"}
+            title={"My Deliveries"}
           />
         </>
       ),

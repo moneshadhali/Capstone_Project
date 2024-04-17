@@ -8,7 +8,7 @@ const DeliveryHistory = ({ orderHistory }) => {
           <span className="bold-text">Order Ref.</span> {order.id}
         </p>
         <p className="grid-start-1">
-          <span className="bold-text">Post Code:</span>
+          <span className="bold-text">Postcode:</span>
           {order.postcode}
         </p>
         <p>

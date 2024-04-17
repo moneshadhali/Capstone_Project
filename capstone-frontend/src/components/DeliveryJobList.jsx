@@ -1,7 +1,7 @@
 import DeliveryJob from "./DeliveryJob";
 import "../styles/delivery-jobs.css";
 
-const DeliveryJobList = ({ jobs, updateBtn, btnMessage }) => {
+const DeliveryJobList = ({ jobs, updateBtn, btnMessage, title }) => {
   const jobComponents = jobs.map((job) => {
     return (
       <DeliveryJob
@@ -15,7 +15,7 @@ const DeliveryJobList = ({ jobs, updateBtn, btnMessage }) => {
 
   return (
     <section className="job-list">
-      <h3 className="delivery-h3">Available Jobs</h3>
+      <h3 className="delivery-h3">{title}</h3>
       <div className="job-components">{jobComponents}</div>
     </section>
   );
