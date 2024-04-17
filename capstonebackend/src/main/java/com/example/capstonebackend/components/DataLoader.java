@@ -52,22 +52,22 @@ public class DataLoader implements ApplicationRunner {
         Order order1 = new Order(user1, "KT1 3PB", "32 Kingston Road", true, false, "Henry", 40 );
         orderRepository.save(order1);
 
-        Order order2 = new Order(user2,"LU8 3JS", "109 Luton Way", true, false, "Lisa", 20 );
+        Order order2 = new Order(user2,"SE16 5AA", "18 Rotherhilthe Street", true, false, "Lisa", 20 );
         orderRepository.save(order2);
 
-        Order order3 = new Order("SE1  3JS", "109 Clapham Common", false, false, "Jeffrey", 50 );
+        Order order3 = new Order("NW3 3AX", "25 Primrose Hill Road", false, false, "Jeffrey", 50 );
         orderRepository.save(order3);
 
-        Order order4 = new Order(user1, "H87 3PB", "99 Queen Road", true, true, "Jenny", 60 );
+        Order order4 = new Order(user1, "NW1 2RT", "171 Euston Road", true, true, "Jenny", 60 );
         orderRepository.save(order4);
 
-        Order order5 = new Order("LU8 3JS", "49 Luton Way", false, false, "Martin", 20 );
+        Order order5 = new Order("SW11 51J", "44 Lavender Hill", false, false, "Martin", 20 );
         orderRepository.save(order5);
 
-        Order order6 = new Order("SE1  3JS", "19 Clapham Common", false, false, "Johnny", 50 );
+        Order order6 = new Order("N4 2LF", "201 Alexandra Grove", false, false, "Johnny", 50 );
         orderRepository.save(order6);
 
-        Order order7 = new Order( "H87 3PB", "9 Queen Road", false, false, "Sam", 60 );
+        Order order7 = new Order( "E1 7EZ", "80 Middlesex Street", false, false, "Sam", 60 );
         orderRepository.save(order7);
 
         //Packages
