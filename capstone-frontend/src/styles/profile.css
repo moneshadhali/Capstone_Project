@@ -97,17 +97,26 @@ label{
   border: none;
 }
 
-/* header{
-  width: 100vw;
-  height: 8vh;
-  background-color: #006D77;
+.submit-btn{
+  background-color: #83C5BE;
+  text-transform: uppercase;
+  font: inherit;
 }
 
-header img{
-  height: 100%;
-  width: auto;
-  border-radius: 1%;
-} */
+.submit-btn:hover{
+  background-color: #006D77
+}
+
+.btp-btn{
+  background-color:#e28f71;
+  text-transform: uppercase;
+  font: inherit;
+}
+
+.btp-btn:hover{
+  background-color: #dc6d45;
+}
+
 
 
 }
