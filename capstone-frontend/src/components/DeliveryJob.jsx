@@ -36,7 +36,7 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
           {/* <button onClick={toggle}>View Packages</button>
           {open && <div>{packageList}</div>} */}
 
-          <button onClick={() => setShowPackages(true)}>View Packages</button>
+          <button className="view-packages-btn" onClick={() => setShowPackages(true)}>View Packages</button>
           {showPackages && (
             <PackageListPopup
               job={job}

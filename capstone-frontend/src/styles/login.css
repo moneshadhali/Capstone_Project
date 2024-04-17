@@ -1,7 +1,6 @@
 header{
     width: 100vw;
     height: 8vh;
-    background-color: #006D77;
 }
 
 header img{
@@ -57,6 +56,15 @@ header img{
     color: #FFFFFF;
     border: 2px solid #E27160;
 }
+
+.welcome{
+    text-align: center; 
+    font-weight: 600;
+    display: grid;
+    gap: 10px;
+    color: #E27160;
+}
+
 @media only screen and (max-width: 600px) {
     .login-child{
         width: auto;

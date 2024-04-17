@@ -23,11 +23,19 @@ const Login = ({ users, setCurrentUser }) => {
 
   return (
     <>
+     
     <header>
-      <img src="images/logo.png" alt="logo"/>
+      <img className="company-logo" src="images/logo.png" alt="logo"/>
+      <div className="welcome">
+      <h2>Welcome</h2>
+      <h3>Shot Put Delivery</h3>
+    </div>
     </header>
+   
+
     <div className="login-container">
       <div className="login-child">
+      
         <h4>Login</h4>
         <form onSubmit={handleLogin}>
           <select

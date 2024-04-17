@@ -36,8 +36,3 @@ form > *, .btn{
   border: 2px solid #83C5BE;
   color: #FFF;
 }
-
-.btn:hover{
-  background-color: #FFF;
-  color: #006D77;
-}
