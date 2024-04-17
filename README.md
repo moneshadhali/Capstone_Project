@@ -68,12 +68,6 @@ Shot Put Delivery is built on the following technologies:
 - Slack
 - Git
 
-**Retro**
-
-Link: https://metroretro.io/BOTRKBDV2K7N
-![Screenshot 2024-04-12 at 11 14 05](https://github.com/moneshadhali/Capstone_Project/assets/148503750/5bec7282-a78b-4608-b76a-1c0ff7cd1b7f)
-
-
 <a id="installation"></a>
 ## Installation Instructions
 
@@ -138,6 +132,13 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 ![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/624ec6ff-3977-4543-b0c9-e5d0b142d297)
 
 ![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/af33b94f-d007-46de-8de8-f534c505efbe)
+
+
+## Retro ##
+
+Link: https://metroretro.io/BOTRKBDV2K7N
+![Screenshot 2024-04-12 at 11 14 05](https://github.com/moneshadhali/Capstone_Project/assets/148503750/5bec7282-a78b-4608-b76a-1c0ff7cd1b7f)
+
 
 
 <a id="data-dictionary"></a>
