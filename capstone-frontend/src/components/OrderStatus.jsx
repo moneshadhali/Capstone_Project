@@ -29,6 +29,7 @@ const OrderStatus = ({order, orderStatus}) => {
             />
             
             <input 
+            className="btn"
             type="submit" 
             value ="submit"/>
             </form>

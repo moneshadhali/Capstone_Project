@@ -67,7 +67,7 @@
   .btn{
     font: inherit;
     text-transform: uppercase;
-    background-color: #34211a;
+    background-color: #e28f71;
     border-radius: 10px;
     border: #e28f71;
   }
@@ -80,7 +80,7 @@
   .btn:hover {
     /* background-color: #dc6d45; */
     background-color: #00494f;
-    color: #83C5BE;
+    color: #fff;
   }
 
   /* this is related to order-status */
@@ -96,26 +96,5 @@
   label{
     border: none;
   }
-
-  /* .submit-btn{
-    background-color: #83C5BE;
-    text-transform: uppercase;
-    font: inherit;
-  }
-
-  .submit-btn:hover{
-    background-color: #006D77
-  }
-
-  .btp-btn{
-    background-color:#e28f71;
-    text-transform: uppercase;
-    font: inherit;
-    
-  }
-
-  .btp-btn:hover{
-    background-color: #dc6d45;
-  } */
 
 }
