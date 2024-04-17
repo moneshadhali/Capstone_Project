@@ -6,10 +6,11 @@
 5. [Extension](#extension)
 6. [Wireframe and Component Diagram](#wireframe)
 7. [Class Diagram and ERD](#class-erd-diagram)
-8. [Data Dictionary](#data-dictionary)
-9. [API Route Table](#api-routes-table)
-10. [Credits and Acknowledgements](#credits-and-acknowledgements)
-11. [Licences](#licences)
+8. [Retrospective](#retro)
+9. [Data Dictionary](#data-dictionary)
+10. [API Route Table](#api-routes-table)
+11. [Credits and Acknowledgements](#credits-and-acknowledgements)
+12. [Licences](#licences)
 
     
 <a id="introduction"></a>
@@ -134,8 +135,8 @@ Shot Put Delivery is built on the following technologies:
 
 ![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/af33b94f-d007-46de-8de8-f534c505efbe)
 
-
-## Retrospectic (Completed mid-way through project) ##
+<a id="retro"></a>
+## Retrospective (Completed mid-way through project) ##
 
 Link: https://metroretro.io/BOTRKBDV2K7N
 ![Screenshot 2024-04-12 at 11 14 05](https://github.com/moneshadhali/Capstone_Project/assets/148503750/5bec7282-a78b-4608-b76a-1c0ff7cd1b7f)
