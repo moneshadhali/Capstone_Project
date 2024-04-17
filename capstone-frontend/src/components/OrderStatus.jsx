@@ -10,6 +10,11 @@ const OrderStatus = ({order, orderStatus}) => {
     }
 
     return ( 
+        <>
+        <header>
+             <img className="company-logo" src="images/logo.png" alt="logo"/>
+        </header>
+
         <div className="profile-details">
             <h1>Order Status</h1>
             <form onSubmit={handleFormSubmit}>
@@ -39,6 +44,7 @@ const OrderStatus = ({order, orderStatus}) => {
             )}
     
         </div> 
+        </>
     );
 }
  
