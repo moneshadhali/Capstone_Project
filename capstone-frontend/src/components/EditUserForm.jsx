@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
-import "../styles/edit-profile.css";
+import "../styles/profile.css";
 
 
 const EditUserForm = ({ userProfile, updateUser }) => {
@@ -19,7 +19,7 @@ const EditUserForm = ({ userProfile, updateUser }) => {
 
     return (
         <>
-            <section className="edit-name">
+            <section className="profile-details">
                 <h1 className="title">Edit Profile</h1>
                 <form onSubmit={handleFormSubmit}>
                     <label htmlFor="newname">Please enter your new name:</label>

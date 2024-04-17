@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/user-profile.css";
+import "../styles/profile.css";
 
 const UserProfile = ({ userProfile }) => {
   if (userProfile) {
