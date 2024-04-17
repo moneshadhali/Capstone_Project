@@ -158,24 +158,24 @@ Package Table
 
 ### Users
 
-| No. | Route                                   | Description                                    | Link                                           |
-|-----|-----------------------------------------|------------------------------------------------|------------------------------------------------|
-| 1   | GET /users                              | Retrieve all users                             | (http://localhost:8080/users)           |
-| 2   | GET /users/:id                          | Retrieve user profile by ID                    | (http://localhost:8080/users/:id)       |
-| 3   | PATCH /users/:id                        | Edit user profile by ID                        | (http://localhost:8080/users/:id)       |
-| 4   | GET /users/:userId/orders               | Retrieve orders by user ID                     | (http://localhost:8080/users/:userId/orders) |
-| 5   | GET /users/:userId/notDeliveredOrders   | Retrieve orders not delivered by user ID       | (http://localhost:8080/users/:userId/notDeliveredOrders) |
-| 6   | GET /users/:userId/deliveredOrders      | Retrieve orders delivered by user ID           | (http://localhost:8080/users/:userId/deliveredOrders) |
-| 7   | PATCH /users/:userId/orders/:orderId    | Edit order by user ID and order ID             | (http://localhost:8080/users/:userId/orders/:orderId) |
+| No. | Route                                   | Description                                    | Link                                   |
+|-----|-----------------------------------------|------------------------------------------------|----------------------------------------|
+| 1   | GET /users                              | Retrieve all users                             | http://localhost:8080/users           |
+| 2   | GET /users/:id                          | Retrieve user profile by ID                     | http://localhost:8080/users/:id       |
+| 3   | PATCH /users/:id                        | Edit user profile by ID                        | http://localhost:8080/users/:id       |
+| 4   | GET /users/:userId/orders               | Retrieve orders by user ID                     | http://localhost:8080/users/:userId/orders |
+| 5   | GET /users/:userId/notDeliveredOrders   | Retrieve orders not delivered by user ID       | http://localhost:8080/users/:userId/notDeliveredOrders |
+| 6   | GET /users/:userId/deliveredOrders      | Retrieve orders delivered by user ID           | http://localhost:8080/users/:userId/deliveredOrders |
+| 7   | PATCH /users/:userId/orders/:orderId    | Edit order by user ID and order ID             | http://localhost:8080/users/:userId/orders/:orderId |
 
 ### Orders
 
-| No. | Route                                   | Description                                    | Link                                           |
-|-----|-----------------------------------------|------------------------------------------------|------------------------------------------------|
-| 1   | GET /orders                             | Retrieve all orders                            | (http://localhost:8080/orders)          |
-| 2   | GET /orders/:orderId                    | Retrieve order by order ID                     | (http://localhost:8080/orders/:orderId) |
-| 3   | PATCH /orders/:orderId                  | Edit order by order ID                         | (http://localhost:8080/orders/:orderId) |
-| 4   | GET /not-accepted                       | Retrieve orders that are not yet accepted      | (http://localhost:8080/not-accepted)   |
+| No. | Route                                   | Description                                    | Link                                   |
+|-----|-----------------------------------------|------------------------------------------------|----------------------------------------|
+| 1   | GET /orders                             | Retrieve all orders                            | http://localhost:8080/orders          |
+| 2   | GET /orders/:orderId                    | Retrieve order by order ID                     | http://localhost:8080/orders/:orderId |
+| 3   | PATCH /orders/:orderId                  | Edit order by order ID                         | http://localhost:8080/orders/:orderId |
+| 4   | GET /not-accepted                       | Retrieve orders that are not yet accepted      | http://localhost:8080/not-accepted    |
 
 
 
