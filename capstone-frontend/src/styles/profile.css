@@ -67,7 +67,7 @@
   .btn{
     font: inherit;
     text-transform: uppercase;
-    background-color: #e28f71;
+    background-color: #34211a;
     border-radius: 10px;
     border: #e28f71;
   }
@@ -79,7 +79,7 @@
 
   .btn:hover {
     /* background-color: #dc6d45; */
-    background-color: white;
+    background-color: #00494f;
     color: #83C5BE;
   }
 
