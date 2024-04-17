@@ -187,7 +187,7 @@ const DeliveryJobContainer = () => {
       path: "/order-status",
       element: (
         <>
-          <h1> Order Status </h1>
+      
           <OrderStatus order={custOrder} orderStatus={fetchCustomerOrder}/>
         </>
       ),

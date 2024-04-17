@@ -50,6 +50,7 @@
     border: 2px solid #83C5BE;
   }
 
+
   header{
     width: 100vw;
     height: 8vh;
@@ -61,4 +62,35 @@
     width: auto;
     border-radius: 1%;
   }
+
+  /* this is related to order-status */
+  .order-info{
+    
+    font-weight: 600;
+    display: grid;
+    gap: 10px;
+    
+    color:#00494f;
+    background-color: #83C5BE;
+    border-radius: 10px;
+    
+}
+
+label{
+  border: none;
+}
+
+/* header{
+  width: 100vw;
+  height: 8vh;
+  background-color: #006D77;
+}
+
+header img{
+  height: 100%;
+  width: auto;
+  border-radius: 1%;
+} */
+
+
 }
