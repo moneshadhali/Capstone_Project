@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../styles/delivery-jobs.css";
 
 const PackageListPopup = ({ job, onClose }) => {

@@ -6,7 +6,6 @@ const Logout =  () => {
 
     const handleLogout = () =>{
         navigate("http://localhost:8080")
-
     }
 
     return ( 
