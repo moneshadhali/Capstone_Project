@@ -21,6 +21,8 @@ In response to the growing need for efficient delivery systems within Rainforest
 Purpose of Technology usage:
 The objective is to enhance learning and skill development as an integral component of the bootcamp experience hence why the following technologies were used.
 
+### Front-End
+
 Shot Put Delivery is built on the following technologies:
 
 **Tech Stack:**
@@ -40,6 +42,8 @@ Shot Put Delivery is built on the following technologies:
 - useNavigate
 - createBrowserRouter
 - RouterProvider
+
+### Back-End
 
 **Tech Stack:**
 - Java
