@@ -42,10 +42,7 @@ const Navigation = () => {
             <Link to="/delivery-history" onClick={closeMenu}>Delivery History</Link>
           </li>
           <li>
-            <Link to="#" onClick={handleLogout}>
-              {" "}
-              Logout{" "}
-            </Link>
+            <Link to="#" onClick={handleLogout}>Logout</Link>
           </li>
         </ul>
       </nav>
