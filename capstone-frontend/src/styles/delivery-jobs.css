@@ -20,15 +20,27 @@
     margin-bottom: 8%;
     font-size: 20px;
     background-color: #83c5be;
-    /* border-radius: 10px; */
-    /* border: #e29578 5px solid; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
   }
 
-  .volume {
+  p > span {
+    font-weight: 600;
+  }
+
+  .view-packages-btn, iframe{
+    margin-top: 4%;
+  }
+
+  iframe{
+    border-radius: 10px;
+  }
+
+  /* .volume {
     font-size: 0.8rem;
     vertical-align: super;
-  }
+  } */
 
   /* .accept-btn {
     font: inherit;
