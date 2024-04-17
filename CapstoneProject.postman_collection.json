@@ -3,8 +3,8 @@
 		"_postman_id": "5d41d4a0-a9e6-4309-9ee2-e5429699695a",
 		"name": "CapstoneProject",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20188508",
-		"_collection_link": "https://dark-comet-721386.postman.co/workspace/New-Team-Workspace~5c71b694-0a6a-4d3a-9e2d-ef8a30b1b349/collection/33464970-5d41d4a0-a9e6-4309-9ee2-e5429699695a?action=share&source=collection_link&creator=20188508"
+		"_exporter_id": "33464970",
+		"_collection_link": "https://dark-comet-721386.postman.co/workspace/New-Team-Workspace~5c71b694-0a6a-4d3a-9e2d-ef8a30b1b349/collection/33464970-5d41d4a0-a9e6-4309-9ee2-e5429699695a?action=share&source=collection_link&creator=33464970"
 	},
 	"item": [
 		{
@@ -81,14 +81,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/users/2/orders",
+							"raw": "localhost:8080/users/1/orders",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"users",
-								"2",
+								"1",
 								"orders"
 							]
 						}
@@ -101,7 +101,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "/users/1/notDeliveredOrders",
+							"raw": "localhost:8080/users/1/notDeliveredOrders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
 							"path": [
 								"users",
 								"1",
@@ -126,6 +130,36 @@
 								"users",
 								"1",
 								"deliveredOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/users/{userId}/orders/{orderId}",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/1/orders/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"1",
+								"orders",
+								"3"
 							]
 						}
 					},
@@ -158,7 +192,18 @@
 					"name": "/orders/:orderId",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"1"
+							]
+						}
 					},
 					"response": []
 				},
@@ -169,7 +214,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"accepted\": true,\n    \"delivered\": true\n}",
+							"raw": "{\n    \"delivered\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,6 +230,25 @@
 							"path": [
 								"orders",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/not-accepted",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/orders/not-accepted",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders",
+								"not-accepted"
 							]
 						}
 					},

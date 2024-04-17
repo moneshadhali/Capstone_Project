@@ -15,11 +15,36 @@
 <a id="introduction"></a>
 ## Introduction
 In response to the growing need for efficient delivery systems within RainforestRetail's expanding warehouse network, our project aims to develop a versatile delivery application. This project aims to enhance operational efficiency by implementing a versatile application capable of seamlessly integrating across various warehouses, thereby eradicating logistical bottlenecks within the distribution network. By optimizing the delivery system on a regional basis, the application seeks to amplify the order capacity, resulting in reduced delivery times for customers and ensuring prompt updates on delivery schedules, thereby enhancing overall customer satisfaction and loyalty.
+With this in mind, we have envisioned the delivery drivers as our end user and will approach our design with a mobile-first methodology.
 
 <a id="technology"></a>
 ## Technology
 Purpose of Technology usage:
 The objective is to enhance learning and skill development as an integral component of the bootcamp experience hence why the following technologies were used.
+
+### Front-End
+
+Shot Put Delivery is built on the following technologies:
+
+**Tech Stack:**
+- JavaScript + React: For building interactive UIs and managing state.
+- HTML: The standard markup language for creating web pages.
+- CSS: For styling and presenting the content elegantly.
+
+**React Libraries Used:**
+- React Router DOM
+- React
+  
+**React Hooks Used:**
+- useState
+- useEffect
+- Link
+- Outlet
+- useNavigate
+- createBrowserRouter
+- RouterProvider
+
+### Back-End
 
 **Tech Stack:**
 - Java
@@ -42,12 +67,6 @@ The objective is to enhance learning and skill development as an integral compon
 - Zoom
 - Slack
 - Git
-
-**Retro**
-
-Link: https://metroretro.io/BOTRKBDV2K7N
-![Screenshot 2024-04-12 at 11 14 05](https://github.com/moneshadhali/Capstone_Project/assets/148503750/5bec7282-a78b-4608-b76a-1c0ff7cd1b7f)
-
 
 <a id="installation"></a>
 ## Installation Instructions
@@ -104,67 +123,96 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 4. User can check the history of orders.
 
 
+
+<a id="wireframe"></a>
+## Wireframe and Component Diagram
+![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/ee33e2db-84d5-444a-a3d8-6a58322643e4)
+
+<a id="class-erd-diagram"></a>
+## Class Diagram and ERD
+![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/624ec6ff-3977-4543-b0c9-e5d0b142d297)
+
+![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/af33b94f-d007-46de-8de8-f534c505efbe)
+
+
+## Retrospectic (Completed mid-way through project) ##
+
+Link: https://metroretro.io/BOTRKBDV2K7N
+![Screenshot 2024-04-12 at 11 14 05](https://github.com/moneshadhali/Capstone_Project/assets/148503750/5bec7282-a78b-4608-b76a-1c0ff7cd1b7f)
+
+
+
 <a id="data-dictionary"></a>
 ## Data Dictionary
 
 Warehouse Table
 
-| Column       | Data Type   | Description           |
-|--------------|-------------|-----------------------|
-| wareHouseId  | Serial      | Primary Key           |
-| name         | VARCHAR(255)| Name of the warehouse |
-| location     | VARCHAR(255)| Location of the warehouse |
-| area         | Double      | Area of the warehouse |
+| No.| Column       | Data Type   | Description           |
+|----|--------------|-------------|-----------------------|
+| 1  | warehouse_id | Serial      | Primary Key           |
+| 2  | name         | VARCHAR(255)| Name of the warehouse |
+| 3  | location     | VARCHAR(255)| Location of the warehouse |
+| 4  | area         | Double      | Area of the warehouse |
 
 User Table
 
-| Column       | Data Type   | Description           |
-|--------------|-------------|-----------------------|
-| user_id      | Serial      | Primary Key           |
-| warehouse_id | INT         | Foreign Key to Warehouse Table |
-| name         | VARCHAR(255)| Name of the user      |
-| region       | VARCHAR(255)| Region of the user    |
-| maxVolume    | Double      | Maximum volume allowed for the user |
+| No.| Column       | Data Type   | Description           |
+|----|--------------|-------------|-----------------------|
+| 1  | user_id      | Serial      | Primary Key           |
+| 2  | warehouse_id | INT         | Foreign Key to Warehouse Table |
+| 3  | name         | VARCHAR(255)| Name of the user      |
+| 4  | region       | VARCHAR(255)| Region of the user    |
+| 5  | maxVolume    | Double      | Maximum volume allowed for the user |
 
 Order Table
 
-| Column        | Data Type   | Description           |
-|---------------|-------------|-----------------------|
-| order_id      | Serial      | Primary Key           |
-| user_id       | INT         | Foreign Key to User Table |
-| postcode      | VARCHAR(255)| Postcode of the order |
-| address       | VARCHAR(255)| Address of the order  |
-| isAccepted    | BOOLEAN     | Order acceptance status |
-| isDelivered   | BOOLEAN     | Order delivery status |
-| customerName  | VARCHAR(255)| Name of the customer  |
-| volume        | Double      | Volume of the order   |
+| No.| Column        | Data Type   | Description           |
+|----|---------------|-------------|-----------------------|
+| 1  | order_id      | Serial      | Primary Key           |
+| 2  | user_id       | INT         | Foreign Key to User Table |
+| 3  | postcode      | VARCHAR(255)| Postcode of the order |
+| 4  | address       | VARCHAR(255)| Address of the order  |
+| 5  | isAccepted    | BOOLEAN     | Order acceptance status |
+| 6  | isDelivered   | BOOLEAN     | Order delivery status |
+| 7  | customerName  | VARCHAR(255)| Name of the customer  |
+| 8  | volume        | Double      | Volume of the order   |
 
 Package Table
 
-| Column       | Data Type   | Description           |
-|--------------|-------------|-----------------------|
-| package_id   | Serial      | Primary Key           |
-| order_id     | INT         | Foreign Key to Order Table |
-| productName  | VARCHAR(255)| Name of the product   |
-| volume       | Double      | Volume of the package |
-| weight       | INT         | Weight of the package |
+| No.| Column       | Data Type   | Description           |
+|----|--------------|-------------|-----------------------|
+| 1  | package_id   | Serial      | Primary Key           |
+| 2  | order_id     | INT         | Foreign Key to Order Table |
+| 3  | productName  | VARCHAR(255)| Name of the product   |
+| 4  | volume       | Double      | Volume of the package |
+| 5  | weight       | INT         | Weight of the package |
 
 
 <a id="api-routes-table"></a>
 ## API Route Table
 
 
-| No. | Route                                   | Description                        | Link                                        |
-|-----|-----------------------------------------|------------------------------------|---------------------------------------------|
-| 1   | GET /delivery/user                      | Retrieve all users                 | http://localhost:8080/delivery/user |
-| 2   | GET /delivery/user/:id                  | Retrieve user profile by ID        | http://localhost:8080/delivery/user/:id |
-| 3   | PUT /delivery/user/:id/edit             | Edit user profile by ID            | http://localhost:8080/delivery/user/:id/edit |
-| 4   | GET /delivery/orders                    | Retrieve all orders                | http://localhost:8080/delivery/orders |
-| 5   | PATCH /delivery.order/:id               | Edit order by ID (prior to acceptance) | http://localhost:8080/delivery.order/:id |
-| 6   | GET /delivery/orders/:userId            | Retrieve orders by user ID         | http://localhost:8080/delivery/orders/:userId |
-| 7   | GET /delivery/orders/:userId/not-delivered | Retrieve orders not delivered by user ID | http://localhost:8080/delivery/orders/:userId/notdelivered|
-| 8   | GET /orders/:orderId                   | Retrieve customer's order by order ID | http://localhost:8080/orders/:orderId |
-| 9   | GET /orders/:userId/completedOrders    | Retrieve orders delivered by user ID | http://localhost:8080/orders/:userId/completedOrders |
+
+### Users
+
+| No. | Route                                   | Description                                    | Link                                   |
+|-----|-----------------------------------------|------------------------------------------------|----------------------------------------|
+| 1   | GET /users                              | Retrieve all users                             | http://localhost:8080/users           |
+| 2   | GET /users/:id                          | Retrieve user profile by ID                     | http://localhost:8080/users/:id       |
+| 3   | PATCH /users/:id                        | Edit user profile by ID                        | http://localhost:8080/users/:id       |
+| 4   | GET /users/:userId/orders               | Retrieve orders by user ID                     | http://localhost:8080/users/:userId/orders |
+| 5   | GET /users/:userId/notDeliveredOrders   | Retrieve orders not delivered by user ID       | http://localhost:8080/users/:userId/notDeliveredOrders |
+| 6   | GET /users/:userId/deliveredOrders      | Retrieve orders delivered by user ID           | http://localhost:8080/users/:userId/deliveredOrders |
+| 7   | PATCH /users/:userId/orders/:orderId    | Edit order by user ID and order ID             | http://localhost:8080/users/:userId/orders/:orderId |
+
+### Orders
+
+| No. | Route                                   | Description                                    | Link                                   |
+|-----|-----------------------------------------|------------------------------------------------|----------------------------------------|
+| 1   | GET /orders                             | Retrieve all orders                            | http://localhost:8080/orders          |
+| 2   | GET /orders/:orderId                    | Retrieve order by order ID                     | http://localhost:8080/orders/:orderId |
+| 3   | PATCH /orders/:orderId                  | Edit order by order ID                         | http://localhost:8080/orders/:orderId |
+| 4   | GET /not-accepted                       | Retrieve orders that are not yet accepted      | http://localhost:8080/not-accepted    |
 
 
 
