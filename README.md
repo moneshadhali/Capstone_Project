@@ -129,6 +129,17 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 4. User can check the history of orders.
 
 
+
+<a id="wireframe"></a>
+## Wireframe and Component Diagram
+
+<a id="class-erd-diagram"></a>
+## Class Diagram and ERD
+![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/624ec6ff-3977-4543-b0c9-e5d0b142d297)
+
+![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/af33b94f-d007-46de-8de8-f534c505efbe)
+
+
 <a id="data-dictionary"></a>
 ## Data Dictionary
 
