@@ -146,45 +146,45 @@ Link: https://metroretro.io/BOTRKBDV2K7N
 
 Warehouse Table
 
-| Column       | Data Type   | Description           |
-|--------------|-------------|-----------------------|
-| warehouse_id | Serial      | Primary Key           |
-| name         | VARCHAR(255)| Name of the warehouse |
-| location     | VARCHAR(255)| Location of the warehouse |
-| area         | Double      | Area of the warehouse |
+| No.| Column       | Data Type   | Description           |
+|----|--------------|-------------|-----------------------|
+| 1  | warehouse_id | Serial      | Primary Key           |
+| 2  | name         | VARCHAR(255)| Name of the warehouse |
+| 3  | location     | VARCHAR(255)| Location of the warehouse |
+| 4  | area         | Double      | Area of the warehouse |
 
 User Table
 
-| Column       | Data Type   | Description           |
-|--------------|-------------|-----------------------|
-| user_id      | Serial      | Primary Key           |
-| warehouse_id | INT         | Foreign Key to Warehouse Table |
-| name         | VARCHAR(255)| Name of the user      |
-| region       | VARCHAR(255)| Region of the user    |
-| maxVolume    | Double      | Maximum volume allowed for the user |
+| No.| Column       | Data Type   | Description           |
+|----|--------------|-------------|-----------------------|
+| 1  | user_id      | Serial      | Primary Key           |
+| 2  | warehouse_id | INT         | Foreign Key to Warehouse Table |
+| 3  | name         | VARCHAR(255)| Name of the user      |
+| 4  | region       | VARCHAR(255)| Region of the user    |
+| 5  | maxVolume    | Double      | Maximum volume allowed for the user |
 
 Order Table
 
-| Column        | Data Type   | Description           |
-|---------------|-------------|-----------------------|
-| order_id      | Serial      | Primary Key           |
-| user_id       | INT         | Foreign Key to User Table |
-| postcode      | VARCHAR(255)| Postcode of the order |
-| address       | VARCHAR(255)| Address of the order  |
-| isAccepted    | BOOLEAN     | Order acceptance status |
-| isDelivered   | BOOLEAN     | Order delivery status |
-| customerName  | VARCHAR(255)| Name of the customer  |
-| volume        | Double      | Volume of the order   |
+| No.| Column        | Data Type   | Description           |
+|----|---------------|-------------|-----------------------|
+| 1  | order_id      | Serial      | Primary Key           |
+| 2  | user_id       | INT         | Foreign Key to User Table |
+| 3  | postcode      | VARCHAR(255)| Postcode of the order |
+| 4  | address       | VARCHAR(255)| Address of the order  |
+| 5  | isAccepted    | BOOLEAN     | Order acceptance status |
+| 6  | isDelivered   | BOOLEAN     | Order delivery status |
+| 7  | customerName  | VARCHAR(255)| Name of the customer  |
+| 8  | volume        | Double      | Volume of the order   |
 
 Package Table
 
-| Column       | Data Type   | Description           |
-|--------------|-------------|-----------------------|
-| package_id   | Serial      | Primary Key           |
-| order_id     | INT         | Foreign Key to Order Table |
-| productName  | VARCHAR(255)| Name of the product   |
-| volume       | Double      | Volume of the package |
-| weight       | INT         | Weight of the package |
+| No.| Column       | Data Type   | Description           |
+|----|--------------|-------------|-----------------------|
+| 1  | package_id   | Serial      | Primary Key           |
+| 2  | order_id     | INT         | Foreign Key to Order Table |
+| 3  | productName  | VARCHAR(255)| Name of the product   |
+| 4  | volume       | Double      | Volume of the package |
+| 5  | weight       | INT         | Weight of the package |
 
 
 <a id="api-routes-table"></a>
