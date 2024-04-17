@@ -64,40 +64,40 @@
     border-radius: 1%;
   }
 
-  .edit-btn{
+  .btn{
     font: inherit;
     text-transform: uppercase;
     background-color: #e28f71;
+    border-radius: 10px;
+    border: #e28f71;
   }
 
-  .edit-btn a {
+  .btn a {
     color: #000000;
     text-decoration: none;
   }
 
-  .edit-btn:hover {
-    background-color: #dc6d45;
+  .btn:hover {
+    /* background-color: #dc6d45; */
+    background-color: white;
     color: #83C5BE;
   }
 
   /* this is related to order-status */
   .order-info{
-    
     font-weight: 600;
     display: grid;
     gap: 10px;
-    
     color:#00494f;
     background-color: #83C5BE;
     border-radius: 10px;
-    
   }
 
   label{
     border: none;
   }
 
-  .submit-btn{
+  /* .submit-btn{
     background-color: #83C5BE;
     text-transform: uppercase;
     font: inherit;
@@ -111,12 +111,11 @@
     background-color:#e28f71;
     text-transform: uppercase;
     font: inherit;
+    
   }
 
   .btp-btn:hover{
     background-color: #dc6d45;
-  }
-
-
+  } */
 
 }

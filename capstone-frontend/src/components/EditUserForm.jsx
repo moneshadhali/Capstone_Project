@@ -31,11 +31,11 @@ const EditUserForm = ({ userProfile, updateUser }) => {
                         onChange={(e) => setName(e.target.value)}
                     />
                     <input
-                        className="submit-btn"
+                        className="btn"
                         type="submit"
                         value="Submit" />
                 </form>
-                <button className="btp-btn" onClick={() => navigate("/profile")}>Back To Profile</button>
+                <button className="btn" onClick={() => navigate("/profile")}>Back To Profile</button>
             </section>
         </>
     );

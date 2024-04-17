@@ -23,11 +23,9 @@ const UserProfile = ({ userProfile }) => {
                 {userProfile.warehouse.name}
               </p>
             </div>
-
-              <button className="edit-btn">
-                <Link to={`/profile/${userProfile.id}/edit`}>Edit</Link>
-              </button>
-
+            <button className="btn">
+              <Link to={`/profile/${userProfile.id}/edit`}>Edit</Link>
+            </button>
           </div>
         </section>
       </>
