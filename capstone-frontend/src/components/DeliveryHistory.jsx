@@ -4,9 +4,16 @@ const DeliveryHistory = ({ orderHistory }) => {
   const history = orderHistory.map((order, index) => {
     return (
       <div className="history-listing" key={index}>
-        <p>Order Ref. {order.id}</p>
-        <p>Post Code: {order.postcode}</p>
-        <p>Address: {order.address}</p>
+        <p>
+          <span className="bold-text">Order Ref.</span> {order.id}
+        </p>
+        <p className="grid-start-1">
+          <span className="bold-text">Post Code:</span>
+          {order.postcode}
+        </p>
+        <p>
+          <span className="bold-text">Address:</span> {order.address}
+        </p>
       </div>
     );
   });
