@@ -21,6 +21,26 @@ In response to the growing need for efficient delivery systems within Rainforest
 Purpose of Technology usage:
 The objective is to enhance learning and skill development as an integral component of the bootcamp experience hence why the following technologies were used.
 
+Shot Put Delivery is built on the following technologies:
+
+**Tech Stack:**
+- JavaScript + React: For building interactive UIs and managing state.
+- HTML: The standard markup language for creating web pages.
+- CSS: For styling and presenting the content elegantly.
+
+**React Libraries Used:**
+- react-router-dom
+- react
+  
+**React Hooks Used:**
+- useState
+- useEffect
+- Link
+- Outlet
+- useNavigate
+- createBrowserRouter
+- RouterProvider
+
 **Tech Stack:**
 - Java
 - SpringBoot
@@ -111,7 +131,7 @@ Warehouse Table
 
 | Column       | Data Type   | Description           |
 |--------------|-------------|-----------------------|
-| wareHouseId  | Serial      | Primary Key           |
+| warehouse_id | Serial      | Primary Key           |
 | name         | VARCHAR(255)| Name of the warehouse |
 | location     | VARCHAR(255)| Location of the warehouse |
 | area         | Double      | Area of the warehouse |
