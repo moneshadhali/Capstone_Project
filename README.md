@@ -126,6 +126,7 @@ Shot Put Delivery is built on the following technologies:
 
 <a id="wireframe"></a>
 ## Wireframe and Component Diagram
+![image](https://github.com/moneshadhali/Capstone_Project/assets/99983599/ee33e2db-84d5-444a-a3d8-6a58322643e4)
 
 <a id="class-erd-diagram"></a>
 ## Class Diagram and ERD
