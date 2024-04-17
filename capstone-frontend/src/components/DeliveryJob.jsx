@@ -13,15 +13,6 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
     navigate("/my-deliveries");
   };
 
-  // const [open, setOpen] = useState(false);
-  // const toggle = () => {
-  //   setOpen(!open);
-  // };
-
-  // const packageList = job.packages.map((pack) => {
-  //   return <li>{pack.product_name}</li>;
-  // });
-
   if (job) {
     return (
       <section className="job-listing">
@@ -31,10 +22,6 @@ const DeliveryJob = ({ job, updateBtn, btnMessage }) => {
           </p>
           <p>Address: {job.address}</p>
           <p>Postcode: {job.postcode}</p>
-
-          {/* <ul>Packages: {packageList}</ul> */}
-          {/* <button onClick={toggle}>View Packages</button>
-          {open && <div>{packageList}</div>} */}
 
           <button className="view-packages-btn" onClick={() => setShowPackages(true)}>View Packages</button>
           {showPackages && (
