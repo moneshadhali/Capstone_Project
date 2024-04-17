@@ -2,17 +2,18 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import { useEffect, useState } from "react";
 import DeliveryJobList from "../components/DeliveryJobList";
-import UserDeliveryJobList from "../components/UserDeliveryJobList";
 import UserProfile from "../components/UserProfile";
 import Login from "../components/Login";
 import EditUserForm from "../components/EditUserForm";
 import DeliveryHistory from "../components/DeliveryHistory";
+import OrderStatus from "../components/OrderStatus";
 
 const API_ROOT = "http://localhost:8080";
 
 const DeliveryJobContainer = () => {
   const [jobs, setJobs] = useState([]);
   const [userJobs, setUserJobs] = useState([]);
+  const [custOrder, setCustOrder] = useState(null);
   const [orderHistory, setOrderHistory] = useState([]);
 
   const [users, setUsers] = useState([]);
@@ -43,6 +44,12 @@ const DeliveryJobContainer = () => {
     const response = await fetch(`${API_ROOT}/users/${currentUser}`);
     const data = await response.json();
     setUserProfile(data);
+  };
+
+  const fetchCustomerOrder = async (orderId) => {
+    const response = await fetch(`${API_ROOT}/orders/${orderId}`);
+    const data = await response.json();
+    setCustOrder(data);
   };
 
   const fetchOrderHistory = async () => {
@@ -87,7 +94,7 @@ const DeliveryJobContainer = () => {
     };
 
     if (currentUser) {
-      const response = await fetch(`${API_ROOT}/orders/${orderId}`, {
+      await fetch(`${API_ROOT}/orders/${orderId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +102,6 @@ const DeliveryJobContainer = () => {
         body: JSON.stringify(order),
       });
 
-      const data = await response.json();
       setUserJobs(userJobs.filter((userJob) => userJob.id !== orderId));
     }
   };
@@ -181,8 +187,8 @@ const DeliveryJobContainer = () => {
       path: "/order-status",
       element: (
         <>
-          <Navigation />
           <h1> Order Status </h1>
+          <OrderStatus order={custOrder} orderStatus={fetchCustomerOrder}/>
         </>
       ),
     },
