@@ -1,79 +1,73 @@
-header{
+@media only screen and (max-width: 600px) {
+  header {
     width: 100vw;
     height: 8vh;
-    background-color: #006D77;
-}
+    background-color: #006d77;
+  }
 
-header img{
+  header img {
     height: 100%;
     width: auto;
     border-radius: 1;
-}
+  }
 
-.login-container {
+  .login-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FFFFFF;
-    color: #FFFFFF;
-    height: 92vh;
-    width: 100vw;
-}
+    background-color: #ffffff;
+    color: #ffffff;
+    height: 900px;
+    width: 430px;
+    margin: 0 auto;
+  }
 
-.login-child{
-    width: auto;
-    height: 30%;
-    background-color: #006D77;
-    border-radius: 6%;
-}
+  .login-child {
+    width: 80%;
+    /* height: 200px; */
+    background-color: #006d77;
+    border-radius: 4%;
+  }
 
-.login-child form{
+  .login-child form {
     padding: 30px;
-}
+  }
 
-.login-child form > *{
+  .login-child form > * {
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #00494f;
     width: 100%;
     padding: 5%;
     margin-bottom: 5px;
-    border: 2px solid #FFFFFF;
-}
+    border: 2px solid #ffffff;
+  }
 
-.login-child h4{
+  .login-child h4 {
     padding-top: 10px;
     padding-left: 15%;
     margin-top: 5%;
-}
+  }
 
-.login-btn:hover{
-    background-color: #006D77;
-    color: #FFFFFF;
-    border: 2px solid #FFFFFF;
-}
+  .login-btn:hover {
+    background-color: #006d77;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+  }
 
-.login-btn:active{
-    background-color: #E27160;
-    color: #FFFFFF;
-    border: 2px solid #E27160;
-}
+  .login-btn:active {
+    background-color: #e27160;
+    color: #ffffff;
+    border: 2px solid #e27160;
+  }
 
-.welcome{
-    text-align: center; 
+  .welcome {
+    text-align: center;
     font-weight: 600;
     display: grid;
     gap: 10px;
-    color: #E27160;
+    color: #e27160;
     margin-top: 30%;
     font-size: 1.5em;
-}
-
-@media only screen and (max-width: 600px) {
-    .login-child{
-        width: auto;
-        height: 30%;
-        background-color: #006D77;
-        border-radius: 6%;
-    }
+  }
 }

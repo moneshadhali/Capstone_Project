@@ -23,36 +23,33 @@ const Login = ({ users, setCurrentUser }) => {
 
   return (
     <>
-     
-    <header>
-      <img className="company-logo" src="images/logo.png" alt="logo"/>
-      <div className="welcome">
-        <h2>Welcome</h2>
-        <h3>Shot Put Delivery</h3>
-      </div>
-    </header>
-   
+      <header>
+        <img className="company-logo" src="images/logo.png" alt="logo" />
+        <div className="welcome">
+          <h3>Welcome</h3>
+          <h3>Shot Put Delivery</h3>
+        </div>
+      </header>
 
-    <div className="login-container">
-      <div className="login-child">
-      
-        <h4>Login</h4>
-        <form onSubmit={handleLogin}>
-          <select
-            name="user"
-            id="user"
-            defaultValue="Select a user"
-            onChange={handleChange}
-          >
-            <option disabled value="Select a user">
-              Select a user
-            </option>
-            {userOptions}
-          </select>
-          <input type="submit" value="Log in" className="login-btn"/>
-        </form>
+      <div className="login-container">
+        <div className="login-child">
+          <h4>Login</h4>
+          <form onSubmit={handleLogin}>
+            <select
+              name="user"
+              id="user"
+              defaultValue="Select a user"
+              onChange={handleChange}
+            >
+              <option disabled value="Select a user">
+                Select a user
+              </option>
+              {userOptions}
+            </select>
+            <input type="submit" value="Log in" className="login-btn" />
+          </form>
+        </div>
       </div>
-    </div>
     </>
   );
 };
