@@ -68,7 +68,6 @@
     display: grid;
     gap: 10px;
     color: #e27160;
-    /* margin-top: 10%; */
     font-size: 1.5em;
   }
 
@@ -80,7 +79,6 @@
 
   .bike {
     width: 300px;
-    /* height: auto; */
     position: absolute;
     top: 100px;
     right: 60px;
