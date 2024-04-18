@@ -3,24 +3,26 @@ import "../styles/profile.css";
 
 const UserProfile = ({ userProfile }) => {
   if (userProfile) {
-    return ( 
+    return (
       <>
         <section className="profile">
           <div className="profile-details">
             <h1>Profile</h1>
-            <img src="images/profile1.jpg" alt="profile picture" ></img>
+            <img src="images/profile1.jpg" alt="profile-picture"></img>
             <div className="name">
               <p>
-                <span>Name:</span> {userProfile.name}</p>
+                <span>Name:</span> {userProfile.name}
+              </p>
             </div>
             <div className="region">
               <p>
-                <span>Region:</span> {userProfile.region}</p>
+                <span>Region:</span> {userProfile.region}
+              </p>
             </div>
             <div className="location">
               <p>
-                <span>Warehouse Location: </span> {userProfile.warehouse.location},{" "}
-                {userProfile.warehouse.name}
+                <span>Warehouse Location: </span>{" "}
+                {userProfile.warehouse.location}, {userProfile.warehouse.name}
               </p>
             </div>
             <button className="btn">

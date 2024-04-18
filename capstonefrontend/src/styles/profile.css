@@ -13,20 +13,22 @@
     text-align: center;
   }
 
-  h1{
+  h1 {
     font-size: 2em;
   }
 
-  .profile-details > *{
+  .profile-details > * {
     padding: 3%;
   }
 
-  .name, .region, .location{
+  .name,
+  .region,
+  .location {
     border-radius: 10px;
-    border: 2px solid #83C5BE;
+    border: 2px solid #83c5be;
   }
 
-  .profile img{
+  .profile img {
     border-radius: 50%;
     height: 8em;
     width: 8em;
@@ -35,36 +37,36 @@
 
   .profile-details p span {
     font-weight: 600;
-  } 
+  }
 
-  form{ 
+  form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     border-radius: 10px;
     padding: 3% 0;
   }
-  
-  form > *, .btn{ 
+
+  form > *,
+  .btn {
     margin-bottom: 2%;
     padding: 3%;
     border-radius: 10px;
-    border: 2px solid #83C5BE;
+    border: 2px solid #83c5be;
   }
 
-
-  header{
+  header {
     width: 100vw;
     height: 8vh;
-    background-color: #006D77;
+    background-color: #006d77;
   }
 
-  header img{
+  header img {
     height: 100%;
     width: auto;
     border-radius: 1%;
   }
 
-  .btn{
+  .btn {
     font: inherit;
     text-transform: uppercase;
     background-color: #e28f71;
@@ -83,18 +85,16 @@
     color: #fff;
   }
 
-  /* this is related to order-status */
-  .order-info{
+  .order-info {
     font-weight: 600;
     display: grid;
     gap: 10px;
-    color:#00494f;
-    background-color: #83C5BE;
+    color: #00494f;
+    background-color: #83c5be;
     border-radius: 10px;
   }
 
-  label{
+  label {
     border: none;
   }
-
 }

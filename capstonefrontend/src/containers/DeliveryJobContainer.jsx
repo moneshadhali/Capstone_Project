@@ -81,7 +81,6 @@ const DeliveryJobContainer = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        //  body: JSON.stringify(),
       });
       setJobs(jobs.filter((job) => job.id !== id));
       setUserJobs([...userJobs, jobs.find((job) => job.id === id)]);
@@ -189,8 +188,7 @@ const DeliveryJobContainer = () => {
       path: "/order-status",
       element: (
         <>
-      
-          <OrderStatus order={custOrder} orderStatus={fetchCustomerOrder}/>
+          <OrderStatus order={custOrder} orderStatus={fetchCustomerOrder} />
         </>
       ),
     },
