@@ -50,6 +50,9 @@ const Login = ({ users, setCurrentUser }) => {
           </form>
         </div>
       </div>
+      <footer>
+        <p>2024 Shot Put Delivery &#169;</p>
+      </footer>
     </>
   );
 };
