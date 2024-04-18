@@ -25,13 +25,17 @@ const Login = ({ users, setCurrentUser }) => {
     <>
       <header>
         <img className="company-logo" src="images/logo.png" alt="logo" />
-        <div className="welcome">
-          <h3>Welcome</h3>
-          <h3>Shot Put Delivery</h3>
-        </div>
       </header>
 
       <div className="login-container">
+        <figure>
+          <img className="bike" src="images/bike1.jpeg" alt="bike" />
+        </figure>
+
+        <div className="welcome">
+          <h3 className="shot-put-title">Shot Put Delivery</h3>
+        </div>
+
         <div className="login-child">
           <h4>Login</h4>
           <form onSubmit={handleLogin}>

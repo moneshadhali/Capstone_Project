@@ -13,6 +13,7 @@
 
   .login-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
@@ -67,11 +68,25 @@
     display: grid;
     gap: 10px;
     color: #e27160;
-    margin-top: 30%;
+    /* margin-top: 10%; */
     font-size: 1.5em;
   }
 
-  footer{
+  .shot-put-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    z-index: 1;
+  }
+
+  .bike {
+    width: 300px;
+    /* height: auto; */
+    position: absolute;
+    top: 100px;
+    right: 60px;
+  }
+
+  footer {
     width: 100vw;
     height: 70px;
     background-color: #006d77;
@@ -79,8 +94,7 @@
     color: #ffffff;
   }
 
-  footer p{
+  footer p {
     padding-top: 25px;
   }
-
 }
