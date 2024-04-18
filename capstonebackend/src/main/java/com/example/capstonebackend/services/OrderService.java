@@ -31,15 +31,6 @@ public class OrderService {
         return orderRepository.save(order);
     }
 
-//    public Order updateOrder(Long id, Order order){
-//        if (orderRepository.existsById(id)){
-//            order.setId(id);
-//            return orderRepository.save(order);
-//        }
-//        return null;
-//    }
-
-
     public Order updateDeliveryStatus(Long id, OrderDTO orderDTO){
         Order orderToUpdate = orderRepository.findById(id).get();
         orderToUpdate.setDelivered(orderDTO.isDelivered());
@@ -54,7 +45,6 @@ public class OrderService {
     public Optional<Order> findOrder(Long id) {
         return orderRepository.findById(id);
     }
-
 
     public List<Order> getNonAcceptedOrders() {
         return orderRepository.findOrderByIsAcceptedIsFalse();

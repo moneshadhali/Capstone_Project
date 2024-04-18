@@ -34,7 +34,7 @@ public class PackageService {
         return null;
     }
 
-        public void deletePackage(Long id){
+    public void deletePackage(Long id){
         packageRepository.deleteById(id);
-        }
+    }
 }

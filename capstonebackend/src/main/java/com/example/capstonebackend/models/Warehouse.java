@@ -1,9 +1,7 @@
 package com.example.capstonebackend.models;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,8 +27,6 @@ public class Warehouse {
         this.area = area;
         this.users = new ArrayList<>();
     }
-
-
 
     public Warehouse() {
     }
@@ -83,4 +79,3 @@ public class Warehouse {
         this.users.add(user);
     }
 }
-

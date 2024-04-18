@@ -2,7 +2,6 @@ package com.example.capstonebackend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +40,6 @@ public class User {
     public User() {
 
     }
-
 
     public long getId() {
         return id;
@@ -99,6 +97,3 @@ public class User {
         this.orders.add(order);
     }
 }
-
-
-

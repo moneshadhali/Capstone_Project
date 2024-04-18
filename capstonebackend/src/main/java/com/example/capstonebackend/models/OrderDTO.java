@@ -1,13 +1,5 @@
 package com.example.capstonebackend.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-
-import java.util.List;
-
 public class OrderDTO {
 
     private long id;

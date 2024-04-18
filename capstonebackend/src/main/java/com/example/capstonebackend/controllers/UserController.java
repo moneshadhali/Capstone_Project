@@ -26,7 +26,6 @@ public class UserController {
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         Optional<User> user = userService.getUserById(id);
-
         if(user.isPresent()){
             return new ResponseEntity<>(user.get(), HttpStatus.FOUND);
         }
@@ -36,7 +35,6 @@ public class UserController {
     @GetMapping(value = "/{id}/orders")
     public ResponseEntity<List<Order>> getUserOrders(@PathVariable Long id) {
         Optional<User> user = userService.getUserById(id);
-
         if(user.isPresent()){
             List<Order> userOrders = userService.getUserOrders(id);
             return new ResponseEntity<>(userOrders, HttpStatus.OK);
@@ -47,7 +45,6 @@ public class UserController {
     @GetMapping(value = "/{id}/notDeliveredOrders")
     public ResponseEntity<List<Order>> getUserNotDeliveredOrders(@PathVariable Long id) {
         Optional<User> user = userService.getUserById(id);
-
         if(user.isPresent()){
             List<Order> userOrders = userService.getUserNotDeliveredOrders(id);
             return new ResponseEntity<>(userOrders, HttpStatus.OK);
@@ -58,7 +55,6 @@ public class UserController {
     @GetMapping(value = "/{id}/deliveredOrders")
     public ResponseEntity<List<Order>> getUserDeliveredOrders(@PathVariable Long id) {
         Optional<User> user = userService.getUserById(id);
-
         if(user.isPresent()){
             List<Order> userOrders = userService.getUserDeliveredOrders(id);
             return new ResponseEntity<>(userOrders, HttpStatus.OK);

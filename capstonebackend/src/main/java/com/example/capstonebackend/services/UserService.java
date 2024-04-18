@@ -63,13 +63,11 @@ public class UserService {
         return result;
     }
 
-
     public User assignOrderToUser(Long userId, Long orderId) {
         User assignedUser = userRepository.findById(userId).get();
         Order unassignedOrder = orderRepository.findById(orderId).get();
         unassignedOrder.setAccepted(true);
         unassignedOrder.setUser(assignedUser);
-
         orderRepository.save(unassignedOrder);
         userRepository.save(assignedUser);
         return assignedUser;
