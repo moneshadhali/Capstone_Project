@@ -84,10 +84,9 @@ Shot Put Delivery is built on the following technologies:
 ### Server-side
 
 1. Install Postman, Postico, PostgreSQL, and your preferred IDE.
-2. In terminal or Gitbash, navigate to the directory you want to copy the repository into.
-3. Run the command `git clone git@github.com:moneshadhali/Capstone_Project.git`.
-4. In the terminal or Gitbash, create the database called `delivery_db` by running the command `createdb delivery_db`.
-5. In the terminal, run the command `./mvnw spring-boot:run`.
+2. In terminal or Gitbash, navigate to the directory you copied.
+3. In the terminal or Gitbash, create the database called `delivery_db` by running the command `createdb delivery_db`.
+4. In the terminal, run the command `./mvnw spring-boot:run`.
 
 
 
