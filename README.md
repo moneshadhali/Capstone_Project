@@ -1,3 +1,9 @@
+# Shot Put Delivery
+
+_“We Promise Not To Throw Your Parcel”_
+
+**Team:** No Paparazzi
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Technology](#technology)
@@ -17,6 +23,12 @@
 ## Introduction
 In response to the growing need for efficient delivery systems within RainforestRetail's expanding warehouse network, our project aims to develop a versatile delivery application. This project aims to enhance operational efficiency by implementing a versatile application capable of seamlessly integrating across various warehouses, thereby eradicating logistical bottlenecks within the distribution network. By optimizing the delivery system on a regional basis, the application seeks to amplify the order capacity, resulting in reduced delivery times for customers and ensuring prompt updates on delivery schedules, thereby enhancing overall customer satisfaction and loyalty.
 With this in mind, we have envisioned the delivery drivers as our end user and will approach our design with a mobile-first methodology.
+
+**Documents**
+
+Bussines Case [Link](https://docs.google.com/document/d/1HeNmSLcq2aD8P2ReoYOpsplXqoZlZs3rYhrLZK81nMQ/edit?usp=sharing)
+
+Risk Register [Link](https://docs.google.com/spreadsheets/d/1AYuIQZFufT_Xu5lweC8-hYAKYB0sXCym/edit?usp=sharing&ouid=107736136568167606711&rtpof=true&sd=true)
 
 <a id="technology"></a>
 ## Technology
